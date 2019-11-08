@@ -322,7 +322,25 @@ for period in range(period_train):
         # combine the representatives in memory and newly added data to train
         images_combined_train = np.concatenate((images_new_train, np.reshape(memory_images, newshape=(-1, 1, 6, 10, 75))), axis=0)
         labels_combined_train = np.concatenate((labels_new_train, np.reshape(memory_labels, newshape=(-1))), axis=0)
+        # create a new model and make use of previously trained model by state_dict
         net = Network(num_class=num_class_old, num_new_class=new_num_class)
+        if period == 1:
+            last_net = Network(num_class=num_class_old, num_new_class=0)
+        else:
+            last_net = Network(num_class=num_class_old, num_new_class=new_num_class)
+        last_net.load_state_dict(torch.load(model_path))
+        model.eval()
+        pretrained_dict = last_net.state_dict()
+        net_dict = net.state_dict()
+        print("net_dict")
+        print(net_dict)
+
+        # 1. filter out unnecessary keys
+        pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in net_dict}
+        # 2. overwrite entries in the existing state dict
+        net_dict.update(pretrained_dict) 
+        # 3. load the new state dict
+        net.load_state_dict(net_dict)
         net.to(device)
     
     # reorganize the datasets
@@ -393,12 +411,8 @@ for period in range(period_train):
             bs = len(idx) # same as batchsize unless it is the last batch
             img = images_combined_train[idx]
             lab = labels_combined_train[idx]
-            # print("lab")
-            # print(lab)
             # TODO: change onehot encoding to current number of classes only
             # lab_onehot = utils.one_hot(lab, num_class)
-            # print("lab_onehot")
-            # print(lab_onehot)
             lab_onehot = utils.one_hot(lab, (cur_num_class+new_num_class))
 
             # transform
@@ -415,13 +429,19 @@ for period in range(period_train):
             net.init_hidden(h_ini, c_ini)
 
             output = net(img)
-            # print("output", output.size())
-            # print(output)
-            # classification loss
             indices = torch.LongTensor(np.concatenate((class_old, class_novel), axis=0))
             indices = indices.to(device)
-            # print("indices")
-            # print(indices)
+            if period > 0:
+                # print the variables for debugging
+                print("lab")
+                print(lab)
+                print("lab_onehot", lab_onehot.size())
+                print(lab_onehot)
+                print("output", output.size())
+                print(output)
+                
+                print("indicesi", indices.size())
+                print(indices)
             prob_cls = softmax(torch.index_select(output, 1, indices))
             lab_onehot = torch.index_select(lab_onehot, 1, indices)
             if period >0:
