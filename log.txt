@@ -1,0 +1,13 @@
+(Training set only)
+100 CNN features, 23 specific -> 0.86
+50 CNN features, 23 specific -> 0.75
+100 CNN featuers, 10 invariant -> 0.77
+200 CNN features, 10 invariant -> 0.82
+200 CNN features, 20 invariant -> 0.87
+400 CNN features, 20 invariant -> 0.93 
+
+(80/20 split, per frame classification)
+400 CNN, 20 invariant -> 0.93/0.77 
+
+(80/20 split, per sequence classification)
+400 CNN, 20 invariant -> 1.00/0.9891
