@@ -329,12 +329,22 @@ for period in range(period_train):
         else:
             last_net = Network(num_class=num_class_old, num_new_class=new_num_class)
         last_net.load_state_dict(torch.load(model_path))
-        model.eval()
+        last_net.eval()
         pretrained_dict = last_net.state_dict()
         net_dict = net.state_dict()
-        print("net_dict")
-        print(net_dict)
+        
+        # print("last_net dict")
+        # print([key for key, value in pretrained_dict.items()])
+        # print("net_dict")
+        # print([key for key, value in net_dict.items()])
+        
+        # filter the pretrained dict, drop the last linear weight for net (and subnet if it exists)
+        inherit_layers = ['cnn', 'lstm'] # drop the last linear layer
+        pretrained_dict = {k:v for k, v in pretrained_dict.items() if any(layer in k for layer in inherit_layers)} 
+        # print("filtered pretrained_dict")
+        # print([key for key, value in pretrained_dict.items()])
 
+        
         # 1. filter out unnecessary keys
         pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in net_dict}
         # 2. overwrite entries in the existing state dict
@@ -431,23 +441,23 @@ for period in range(period_train):
             output = net(img)
             indices = torch.LongTensor(np.concatenate((class_old, class_novel), axis=0))
             indices = indices.to(device)
-            if period > 0:
-                # print the variables for debugging
-                print("lab")
-                print(lab)
-                print("lab_onehot", lab_onehot.size())
-                print(lab_onehot)
-                print("output", output.size())
-                print(output)
-                
-                print("indicesi", indices.size())
-                print(indices)
+            # if period > 0:
+            #     # print the variables for debugging
+            #     print("lab")
+            #     print(lab)
+            #     print("lab_onehot", lab_onehot.size())
+            #     print(lab_onehot)
+            #     print("output", output.size())
+            #     print(output)
+            #     
+            #     print("indicesi", indices.size())
+            #     print(indices)
             prob_cls = softmax(torch.index_select(output, 1, indices))
             lab_onehot = torch.index_select(lab_onehot, 1, indices)
-            if period >0:
-                print("prob_cls", prob_cls.size(), "lab_onehot", lab_onehot.size())
-                print("combined old & new indices")
-                print(indices)
+            # if period >0:
+            #     print("prob_cls", prob_cls.size(), "lab_onehot", lab_onehot.size())
+            #     print("combined old & new indices")
+            #     print(indices)
             loss_cls = F.binary_cross_entropy(prob_cls, lab_onehot) # TODO: binary? # classification loss
             # print("batch", batch, "classification loss ", loss_cls)
             # distllation loss for only old class data !
@@ -455,8 +465,10 @@ for period in range(period_train):
 
                 indices = torch.LongTensor(class_old).to(device)
                 dist = torch.index_select(output, 1, indices)
-                dist = softmax(dist/T)   
-
+                dist = softmax(dist/T)
+                # same initialization procedure as net
+                (h_ini, c_ini) = (torch.zeros(2, bs, 50).to(device), torch.zeros(2, bs, 50).to(device))
+                net_old.init_hidden(h_ini, c_ini)
                 output_old = net_old(img)
                 ouput_old = torch.index_select(output_old, 1, indices)
                 lab_dist = softmax(Variable(output_old, requires_grad=False))
@@ -469,7 +481,8 @@ for period in range(period_train):
                 #     indices = indices.cuda()
                 #     dist = torch.index_select(dist, 0, indices)
                 #     lab_dist = torch.index_select(lab_dist, 0, indices)
-
+                
+                # TODO：should only calculate distill loss for those of labels of old classes
                 loss_dist = F.binary_cross_entropy(dist, lab_dist)  # distill loss
             else: 
                 loss_dist = 0

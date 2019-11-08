@@ -110,6 +110,7 @@ class Network(nn.Module):
     def __init__(self, num_class=23, num_new_class=0, hidden_size=50, lstm_layer=2, dropout=0.8):
         super(Network, self).__init__()
         self.num_class = num_class
+        self.output_size = num_class + num_new_class
         if num_new_class==0:
             self.distillation = False
         else:
@@ -122,7 +123,7 @@ class Network(nn.Module):
             batch_first=True,
            dropout=dropout)
         # print("linear layer ", hidden_size, num_class)
-        self.linear = nn.Linear(hidden_size, num_class)
+        self.linear = nn.Linear(hidden_size, self.output_size)
         self.hidden = []
 
         self.subnet = None
