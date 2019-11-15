@@ -8,7 +8,7 @@ from torch.utils import data as data2
 import torch.optim as optim
 import numpy as np
 from torch.autograd import Variable
-import os
+import os, sys
 import copy
 import math
 import time
@@ -16,6 +16,24 @@ import time
 from distill_network import *
 import PIL.Image as Image
 import utils
+import logging
+import logging.config
+
+# config logging in python code
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# create a file handler
+handler = logging.FileHandler('distill_main.log'  # set RotatingileHandler and use handler.doRollover() to create a new logging file each time)
+handler.setLevel(logging.INFO)
+
+# create a logging format
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+
+# add the file handler to the logger
+logger.addHandler(handler)
+
 
 # define distill loss
 class DistillLoss(nn.Module):
@@ -35,6 +53,8 @@ class DistillLoss(nn.Module):
         return totloss
 
 # parameters for slide-learn
+logger.info("set params")
+sys.exit()
 batch_size=23
 num_epochs = 200
 learning_rate = 0.001
@@ -324,10 +344,12 @@ for period in range(period_train):
         labels_combined_train = np.concatenate((labels_new_train, np.reshape(memory_labels, newshape=(-1))), axis=0)
         # create a new model and make use of previously trained model by state_dict
         net = Network(num_class=num_class_old, num_new_class=new_num_class)
+        print("num_class_old", num_class_old)
+        print("new_num_class", new_num_class)
         if period == 1:
             last_net = Network(num_class=num_class_old, num_new_class=0)
         else:
-            last_net = Network(num_class=num_class_old, num_new_class=new_num_class)
+            last_net = Network(num_class=num_class_old-new_num_class, num_new_class=new_num_class)
         last_net.load_state_dict(torch.load(model_path))
         last_net.eval()
         pretrained_dict = last_net.state_dict()
@@ -383,9 +405,10 @@ for period in range(period_train):
             print("current lr = %f" % (lrc))
         
         # optimizer
-        optimizer = optim.SGD(net.parameters(), lr=lrc, momentum=momentum, \
-            weight_decay=decay, nesterov=True)
-        
+        #optimizer = optim.Adam(net.parameters(), lr=lrc, momentum=momentum, \
+        #   weight_decay=decay, nesterov=True)
+        optimizer = optim.Adam(net.parameters(), lr=lrc)
+
         # train
         # print("begin train")
         # print(labels_combined_train.shape[0])
@@ -399,16 +422,19 @@ for period in range(period_train):
         acc_avg = 0
         num_exp = 0
         tstart = time.clock()
-        batchnum_train = math.ceil(labels_combined_train.shape[0]/batchsize)
-
+        batchnum_train = math.floor(labels_combined_train.shape[0]/batchsize)
+        correct = 0 
+        results = []
         # load model
         if period == 0 and flag_model:
             print("load model %s" % model_path)
             net.load_state_dict(torch.load(model_path))
+            net = net.to(device)
             # not the case for CNN-LSTM unless u load the model before
             # TODO use the state_dict to load partial model for either first model or subnet
         # print("batchnum_train", batchnum_train)
         # print("idx_train", idx_train)
+        net.train()
         for batch in range(batchnum_train):
             if period == 0 and flag_model: # no need training
                 num_exp = 1
@@ -421,6 +447,8 @@ for period in range(period_train):
             bs = len(idx) # same as batchsize unless it is the last batch
             img = images_combined_train[idx]
             lab = labels_combined_train[idx]
+            
+            
             # TODO: change onehot encoding to current number of classes only
             # lab_onehot = utils.one_hot(lab, num_class)
             lab_onehot = utils.one_hot(lab, (cur_num_class+new_num_class))
@@ -433,33 +461,47 @@ for period in range(period_train):
             # print("img input example", img.shape) # torch.Size([23, 1, 1, 6, 10, 75])
             # print(img)
             lab_onehot = torch.from_numpy(lab_onehot).float().to(device)
+            
+           
+            optimizer.zero_grad()
 
             # init hidden space for lstm
             (h_ini, c_ini) = (torch.zeros(2, bs, 50).to(device) , torch.zeros(2, bs, 50).to(device))
             net.init_hidden(h_ini, c_ini)
 
             output = net(img)
-            indices = torch.LongTensor(np.concatenate((class_old, class_novel), axis=0))
-            indices = indices.to(device)
-            # if period > 0:
-            #     # print the variables for debugging
-            #     print("lab")
-            #     print(lab)
-            #     print("lab_onehot", lab_onehot.size())
-            #     print(lab_onehot)
-            #     print("output", output.size())
-            #     print(output)
-            #     
-            #     print("indicesi", indices.size())
-            #     print(indices)
-            prob_cls = softmax(torch.index_select(output, 1, indices))
-            lab_onehot = torch.index_select(lab_onehot, 1, indices)
-            # if period >0:
-            #     print("prob_cls", prob_cls.size(), "lab_onehot", lab_onehot.size())
-            #     print("combined old & new indices")
-            #     print(indices)
-            loss_cls = F.binary_cross_entropy(prob_cls, lab_onehot) # TODO: binary? # classification loss
-            # print("batch", batch, "classification loss ", loss_cls)
+            # print("output")
+            # print(output)
+            # try to use nll loss, same as slide_learn
+            lab = torch.from_numpy(lab).to(device)
+            # print("lab")
+            # print(lab)
+
+            # raise ValueError("stop here to check")
+            
+#            indices = torch.LongTensor(np.concatenate((class_old, class_novel), axis=0))
+#            indices = indices.to(device)
+#            # if period > 0:
+#            #     # print the variables for debugging
+#            #     print("lab")
+#            #     print(lab)
+#            #     print("lab_onehot", lab_onehot.size())
+#            #     print(lab_onehot)
+#            #     print("output", output.size())
+#            #     print(output)
+#            #     
+#            #     print("indicesi", indices.size())
+#            #     print(indices)
+#            prob_cls = softmax(torch.index_select(output, 1, indices))
+#            lab_onehot = torch.index_select(lab_onehot, 1, indices)
+#            # if period >0:
+#            #     print("prob_cls", prob_cls.size(), "lab_onehot", lab_onehot.size())
+#            #     print("combined old & new indices")
+#            #     print(indices)
+
+            loss_cls = F.nll_loss(output, lab)
+            # loss_cls = F.binary_cross_entropy(prob_cls, lab_onehot) # TODO: binary? # classification loss
+            print("batch", batch, "classification loss ", loss_cls)
             # distllation loss for only old class data !
             if period > 0:
 
@@ -483,10 +525,15 @@ for period in range(period_train):
                 #     lab_dist = torch.index_select(lab_dist, 0, indices)
                 
                 # TODO：should only calculate distill loss for those of labels of old classes
+                
+                # print("dist example", dist.size())
+                # print(dist)
+                # print("lab_dist example", lab_dist.size())
+                # print(lab_dist)
                 loss_dist = F.binary_cross_entropy(dist, lab_dist)  # distill loss
             else: 
                 loss_dist = 0
-            # print("distillation loss", loss_dist)
+            print("batch", batch, "distillation loss", loss_dist)
             loss = loss_cls + dist_ratio * loss_dist
 
             loss_avg += loss.item()
@@ -496,12 +543,17 @@ for period in range(period_train):
             else:
                 loss_dist_avg += loss_dist.item()
 
-            acc = np.sum(np.equal(np.argmax(prob_cls.cpu().data.numpy(), axis=-1), np.argmax(lab_onehot.cpu().data.numpy(), axis=-1)))
+            # acc = np.sum(np.equal(np.argmax(prob_cls.cpu().data.numpy(), axis=-1), np.argmax(lab_onehot.cpu().data.numpy(), axis=-1)))        
+            # acc_avg += acc
+            # num_exp += np.shape(lab)[0]
+            
+            pred = output.data.max(1, keepdim=True)[1] # get the index of the max log-probability
+            acc = pred.eq(lab.data.view_as(pred)).long().cpu().sum()
             acc_avg += acc
-            num_exp += np.shape(lab)[0]
+            num_exp += bs
             # In PyTorch, we need to set the gradients to zero before starting to do backpropragation 
             # because PyTorch accumulates the gradients on subsequent backward passes.
-            optimizer.zero_grad()
+            
             loss.backward()
             optimizer.step()
 
@@ -512,6 +564,7 @@ for period in range(period_train):
             #         p.data.sub_(gredient_noise_ratio * lrc * torch.from_numpy(
             #             (np.random.random(np.shape(p.data.cpu().data.numpy())) - 0.5)*2).float().cuda())
 
+ 
         loss_avg /= num_exp
         loss_cls_avg /= num_exp
         loss_dist_avg /= num_exp
@@ -569,14 +622,17 @@ for period in range(period_train):
 
         # raise ValueError("stop here to check")
 
-        if len(acc_training)>20 and acc_training[-1]>stop_acc and acc_training[-5]>stop_acc:
+        if len(acc_training)>90 and acc_training[-1]>stop_acc and acc_training[-5]>stop_acc:
             print('training loss converged')
             break
 
-    # save model
-    if period == 0 and (not flag_model):
-        print('save model: %s' % model_path)
-        torch.save(net.state_dict(), model_path)
+    # raise ValueError("stop here to check")
+
+    # save model for each period, update model_path
+    #if period == 0 and (not flag_model):
+    model_path = 'model/model_slide_e2e_{}.pth'.format((cur_num_class+new_num_class))
+    print('save model: %s' % model_path)
+    torch.save(net.state_dict(), model_path)
     
     cur_num_class += new_num_class
     # TODO update the memory

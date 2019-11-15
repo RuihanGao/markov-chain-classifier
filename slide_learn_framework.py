@@ -69,7 +69,7 @@ class CNN(nn.Module):
     
 
 class CNN_LSTM(nn.Module):
-    def __init__(self, seq_len):
+    def __init__(self, seq_len, num_class):
         super(CNN_LSTM, self).__init__()
         self.cnn = CNN(seq_len)
         self.lstm = nn.LSTM(
@@ -79,7 +79,7 @@ class CNN_LSTM(nn.Module):
             batch_first=True,
            dropout=0.8)
         
-        self.linear = nn.Linear(50,23)
+        self.linear = nn.Linear(50,num_class)
         self.hidden = []
         
         
@@ -100,7 +100,7 @@ class CNN_LSTM(nn.Module):
         #print(c_out.size())
         
         r_in = c_out.view(batch_size,sequence_size,-1)
-        r_out, (h_n, h_c) = self.lstm( r_in, self.hidden)#(self.hidden[0][:,:batch_size,:], self.hidden[1][:,:batch_size,:] ))
+        r_out, (h_n, h_c) = self.lstm(r_in, self.hidden)#(self.hidden[0][:,:batch_size,:], self.hidden[1][:,:batch_size,:] ))
         r_out2 = self.linear(r_out[:, -1, :])
 
         return F.log_softmax(r_out2, dim=1)
@@ -115,7 +115,7 @@ seq_len = 75
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-def slide_learn(iteration):
+def slide_learn(iteration, datafile, num_class):
     
     dirName = 'slide_info_' + str(iteration)
     try:
@@ -126,9 +126,14 @@ def slide_learn(iteration):
     dirName = dirName + '/'
     
     # load data
-    [train_ids, train_labels, test_ids, test_labels] = pickle.load(open('slide_6_10.pkl', 'rb'))
+    [train_ids, train_labels, test_ids, test_labels] = pickle.load(open(datafile, 'rb'))
     # print("loading data")
     # print(len(train_ids), len(train_labels), len(test_ids)) # 1173 1173 253
+    # print("train_ids")
+    # print(train_ids)
+    # print("train_labels")
+    # print(train_labels)
+    
     training_dataset = Dataset(train_ids, train_labels)
     X_train = training_dataset.get_X()
     Y_train = training_dataset.get_y()
@@ -138,6 +143,9 @@ def slide_learn(iteration):
     test_dataset = Dataset(test_ids, test_labels)
     X_test = test_dataset.get_X()
     Y_test = test_dataset.get_y()
+    print("Y_test", Y_test.shape)
+    print(Y_test)
+
     # print(X_train.shape)
     # print(len(X_train))
     # print(Y_train[0])
@@ -146,7 +154,7 @@ def slide_learn(iteration):
     train_loader = data2.DataLoader(training_dataset, batch_size=batch_size)
     test_loader = data2.DataLoader(test_dataset, batch_size=batch_size)
     
-    model = CNN_LSTM(seq_len).to(device)
+    model = CNN_LSTM(seq_len, num_class).to(device)
     
     # optimizer
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
@@ -154,7 +162,7 @@ def slide_learn(iteration):
     
     # set initial hidden state
     (h_ini, c_ini) = (torch.zeros(2, batch_size, 50).to(device) , torch.zeros(2, batch_size, 50).to(device))
-    
+    print("init hidden state", h_ini.size()) 
     epoch_lists = []
     model.train()
     for epoch in range(1, num_epochs + 1):
@@ -162,7 +170,10 @@ def slide_learn(iteration):
 
             data = np.expand_dims(data, axis=1)
             data = torch.FloatTensor(data)
-            #print(target.size())
+            # print("train epoch %d, batch %d " %(epoch, batch_idx), target.size())
+            if target.size()[0] != batch_size:
+                # print("epoch {}, batch {} size {} does not match {}, skip".format(epoch, batch_idx, target.size()[0], batch_size))
+                continue
             data, target = data.to(device), target.to(device)
 
 
@@ -175,7 +186,13 @@ def slide_learn(iteration):
             model.init_hidden(h_ini, c_ini)
             
             output = model(data)
-            #print(target.size(), output.size())
+            # print(target.size(), output.size())
+            # print("target")
+            # print(target)
+            # print("output")
+            # print(output)
+            
+            # raise ValueError("stop here to check")
 
             loss = F.nll_loss(output, target)
             loss.backward()
@@ -189,13 +206,17 @@ def slide_learn(iteration):
     pickle.dump(epoch_lists, open(dirName + 'loss.pkl', 'wb'))
     
     ## check for accuracy
-        
+    print("check for accuracy")        
     results = []
     model.eval()
     test_loss = 0
     correct = 0
+    counter = 0
     for data, target in train_loader:
-
+        # print("train loader", counter, target.size())
+        if target.size()[0] != batch_size:
+            # print("batch size {} does not match, skip".format(target.size()[0]))
+            continue
         data = np.expand_dims(data, axis=1)
         data = torch.FloatTensor(data)        
         data, target = data.to(device), target.to(device)
@@ -206,14 +227,21 @@ def slide_learn(iteration):
         pred = output.data.max(
             1, keepdim=True)[1]  # get the index of the max log-probability
         correct += pred.eq(target.data.view_as(pred)).long().cpu().sum()
+        counter += 1
 
     test_loss /= len(train_loader.dataset)
     results.append( 100.0 * correct.item() / len(train_loader.dataset) )
+    print("train loader acc: ", results)
 
     test_loss = 0
     correct = 0
+    counter = 0
     for data, target in test_loader:
+        # print("test loader", counter, target.size())
 
+        if target.size()[0] != batch_size:
+            # print("batch size {} does not match, skip".format(target.size()[0]))
+            continue
         data = np.expand_dims(data, axis=1)
         data = torch.FloatTensor(data)        
         data, target = data.to(device), target.to(device)
@@ -224,14 +252,20 @@ def slide_learn(iteration):
         pred = output.data.max(
             1, keepdim=True)[1]  # get the index of the max log-probability
         correct += pred.eq(target.data.view_as(pred)).long().cpu().sum()
+        counter += 1
 
     test_loss /= len(test_loader.dataset)
+    print("test_loss", test_loss, "correct", correct)
 
-    results.append( 100.0 * correct / len(test_loader.dataset) )
+    results.append( 100.0 * correct.item() / len(test_loader.dataset) )
     
     pickle.dump(results, open(dirName + 'results.pkl', 'wb'))
 
     print("results")
     print(results)
 
-slide_learn(400)
+# datafile = 'slide_6_10.pkl'
+datafile = 'slide_6_10_c8.pkl'
+num_class = int(datafile.split('_c')[1][0])
+print("num_class", num_class)
+slide_learn(400, datafile, num_class)

@@ -37,9 +37,18 @@ object_names = ['bathTowel',
                  'woodHard',
                  'yogaMat']
 
+
+# select 5 representative samples (random selection for now)
+# random selection on Nov 11
+sub_obj_names = ['bathTowel', 'denim', 'metal', 'paper1', 'yogaMat', 'woodHard', 'styrofoam', 'felt']
+# # 5 similar classes
+# sub_obj_names = ['polypropileno', 'polypropilenoSmooth', 'eva', 'thinPolypropylene', 'cuisionFoam']
+# # 5 different classes
+# sub_obj_names = ['bathTowel', 'cardBoard', 'eva', 'paper1', 'styrofoam']
+
 # TODO: select representative types
-shuffle(object_names)
-print(object_names)
+# shuffle(object_names)
+# print(object_names)
 # selected window size
 DEPTH_SIZE = 75
 
@@ -116,7 +125,7 @@ def read_encoder(_filename):
     _peaks = filter_picks(pre_peaks)
     return _df_encoder, _peaks
 
-def generate_slide_data(test_inds):
+def generate_slide_data(names, test_inds, fout):
     train_labels = {}
     test_labels = {}
 
@@ -128,8 +137,10 @@ def generate_slide_data(test_inds):
     data_dir = 'slide_6_10/'
     train_ids = []
     test_ids = []
-
-    for obj_name in object_names:
+    
+    print("generate slide data for: ")
+    print(names)
+    for obj_name in names:
 
         # read data
         df_tactile = read_tactile(obj_name)
@@ -145,17 +156,15 @@ def generate_slide_data(test_inds):
 
             if i in test_inds:
                 test_ids.append(name_convention)
-                test_labels[name_convention] = object_names.index(obj_name)
+                test_labels[name_convention] = names.index(obj_name)
                 test_count += 1
             else:
                 train_ids.append(name_convention)
-                train_labels[name_convention] = object_names.index(obj_name)
+                train_labels[name_convention] = names.index(obj_name)
                 train_count += 1
-    pickle.dump([train_ids, train_labels, test_ids, test_labels], open('slide_6_10.pkl','wb'))
+    pickle.dump([train_ids, train_labels, test_ids, test_labels], open(fout,'wb'))
 
-# generate_slide_data(np.random.choice([i for i in range(62)], int(62 * 0.2))) # put train and test together (N, C, W, H)
-
-def generate_classwise_slide_data(test_inds, num_class=23, C=1, W=6, H=10):
+def generate_classwise_slide_data(names, test_inds, fout, num_class=23, C=1, W=6, H=10):
     num_sample_tot = 62
     num_sample_test = len(test_inds)
     num_sample_train = num_sample_tot - num_sample_test
@@ -179,7 +188,10 @@ def generate_classwise_slide_data(test_inds, num_class=23, C=1, W=6, H=10):
     train_classes_labels = []
     test_classes_labels = []
 
-    for obj_name in object_names:
+    print("generate classwise slide data for: ")
+    print(names)
+    
+    for obj_name in names:
         # initialize empty arrays to store ids per class
         train_ids = []
         test_ids = []
@@ -199,11 +211,11 @@ def generate_classwise_slide_data(test_inds, num_class=23, C=1, W=6, H=10):
 
             if i in test_inds:
                 test_ids.append(name_convention)
-                test_labels[name_convention] = object_names.index(obj_name)
+                test_labels[name_convention] = names.index(obj_name)
                 test_count += 1
             else:
                 train_ids.append(name_convention)
-                train_labels[name_convention] = object_names.index(obj_name)
+                train_labels[name_convention] = names.index(obj_name)
                 train_count += 1
             
             
@@ -214,6 +226,10 @@ def generate_classwise_slide_data(test_inds, num_class=23, C=1, W=6, H=10):
         test_classes_labels.append(test_labels)
         train_classes_labels.append(train_labels) 
             
-    pickle.dump([train_classes_ids, train_classes_labels, test_classes_ids, test_classes_labels], open('slide_6_10_classwise.pkl','wb'))
+    pickle.dump([train_classes_ids, train_classes_labels, test_classes_ids, test_classes_labels], open(fout,'wb'))
 
-generate_classwise_slide_data(np.random.choice([i for i in range(62)], int(62 * 0.2))) # separate by classes (num_class, N, C, W, H) 
+#fout = 'slide_6_10_c8.pkl'
+#generate_slide_data(sub_obj_names, np.random.choice([i for i in range(62)], int(62 * 0.2)), fout) # put train and test together (N, C, W, H)
+
+fout = 'slide_6_10_c8_classwise.pkl'
+generate_classwise_slide_data(sub_obj_names, np.random.choice([i for i in range(62)], int(62 * 0.2)), fout) # separate by classes (num_class, N, C, W, H) 
