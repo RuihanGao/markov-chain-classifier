@@ -1,5 +1,5 @@
 import numpy as np
-import os
+import os, sys
 import pandas as pd
 from scipy.signal import savgol_filter
 
@@ -8,7 +8,7 @@ import torch.nn as nn
 
 import pickle
 from random import shuffle
-
+import copy
 # interpret tactile sensor data on iCub.
 # ref: http://wiki.icub.org/wiki/Tactile_sensors_(aka_Skin)
 
@@ -40,11 +40,28 @@ object_names = ['bathTowel',
 
 # select 5 representative samples (random selection for now)
 # random selection on Nov 11
-sub_obj_names = ['bathTowel', 'denim', 'metal', 'paper1', 'yogaMat', 'woodHard', 'styrofoam', 'felt']
-# # 5 similar classes
-# sub_obj_names = ['polypropileno', 'polypropilenoSmooth', 'eva', 'thinPolypropylene', 'cuisionFoam']
+# sub_obj_names = ['bathTowel', 'denim', 'metal', 'paper1', 'yogaMat', 'woodHard', 'styrofoam', 'felt']
+
+# specify the initial classes
+# # 8 similar classes
+# init_obj_names = ['polypropileno', 'polypropilenoSmooth', 'eva', 'thinPolypropylene', 'cuisionFoam', 'fakeLeather', 'styrofoam', 'spongeWhiteSmall']
 # # 5 different classes
-# sub_obj_names = ['bathTowel', 'cardBoard', 'eva', 'paper1', 'styrofoam']
+init_obj_names = ['bathTowel', 'cardBoard', 'eva', 'paper1', 'styrofoam', 'metal', 'yogaMat', 'cotton']
+
+# shuffle the remaining classes that are to be added later
+obj_names = copy.deepcopy(object_names)
+for obj in init_obj_names:
+    try:
+        obj_names.remove(obj)
+    except ValueError:
+        print(obj, "not found")
+# print("obj_names")
+# print(obj_names)
+# print("init_obj_names")
+# print(init_obj_names)
+shuffle(obj_names)
+# concatenate to obtain the full list
+object_names = init_obj_names + obj_names 
 
 # TODO: select representative types
 # shuffle(object_names)
@@ -231,5 +248,5 @@ def generate_classwise_slide_data(names, test_inds, fout, num_class=23, C=1, W=6
 #fout = 'slide_6_10_c8.pkl'
 #generate_slide_data(sub_obj_names, np.random.choice([i for i in range(62)], int(62 * 0.2)), fout) # put train and test together (N, C, W, H)
 
-fout = 'slide_6_10_c8_classwise.pkl'
-generate_classwise_slide_data(sub_obj_names, np.random.choice([i for i in range(62)], int(62 * 0.2)), fout) # separate by classes (num_class, N, C, W, H) 
+fout = 'slide_6_10_diff_init_classwise.pkl'
+generate_classwise_slide_data(object_names, np.random.choice([i for i in range(62)], int(62 * 0.2)), fout) # separate by classes (num_class, N, C, W, H) 

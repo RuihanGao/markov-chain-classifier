@@ -1,0 +1,666 @@
+2019-11-18 14:05:39,040 - __main__ - INFO - set params
+2019-11-18 14:05:39,042 - __main__ - INFO - class order [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22]
+2019-11-18 14:05:39,042 - __main__ - INFO - train_ids 23 [['polypropileno_0', 'polypropileno_2', 'polypropileno_3', 'polypropileno_4', 'polypropileno_5', 'polypropileno_6', 'polypropileno_7', 'polypropileno_8', 'polypropileno_10', 'polypropileno_11', 'polypropileno_12', 'polypropileno_13', 'polypropileno_15', 'polypropileno_16', 'polypropileno_17', 'polypropileno_19', 'polypropileno_20', 'polypropileno_21', 'polypropileno_22', 'polypropileno_23', 'polypropileno_24', 'polypropileno_25', 'polypropileno_28', 'polypropileno_29', 'polypropileno_32', 'polypropileno_33', 'polypropileno_34', 'polypropileno_35', 'polypropileno_36', 'polypropileno_37', 'polypropileno_39', 'polypropileno_40', 'polypropileno_42', 'polypropileno_43', 'polypropileno_44', 'polypropileno_45', 'polypropileno_46', 'polypropileno_48', 'polypropileno_49', 'polypropileno_50', 'polypropileno_51', 'polypropileno_52', 'polypropileno_54', 'polypropileno_55', 'polypropileno_56', 'polypropileno_57', 'polypropileno_58', 'polypropileno_59', 'polypropileno_60', 'polypropileno_61'], ['polypropilenoSmooth_0', 'polypropilenoSmooth_2', 'polypropilenoSmooth_3', 'polypropilenoSmooth_4', 'polypropilenoSmooth_5', 'polypropilenoSmooth_6', 'polypropilenoSmooth_7', 'polypropilenoSmooth_8', 'polypropilenoSmooth_10', 'polypropilenoSmooth_11', 'polypropilenoSmooth_12', 'polypropilenoSmooth_13', 'polypropilenoSmooth_15', 'polypropilenoSmooth_16', 'polypropilenoSmooth_17', 'polypropilenoSmooth_19', 'polypropilenoSmooth_20', 'polypropilenoSmooth_21', 'polypropilenoSmooth_22', 'polypropilenoSmooth_23', 'polypropilenoSmooth_24', 'polypropilenoSmooth_25', 'polypropilenoSmooth_28', 'polypropilenoSmooth_29', 'polypropilenoSmooth_32', 'polypropilenoSmooth_33', 'polypropilenoSmooth_34', 'polypropilenoSmooth_35', 'polypropilenoSmooth_36', 'polypropilenoSmooth_37', 'polypropilenoSmooth_39', 'polypropilenoSmooth_40', 'polypropilenoSmooth_42', 'polypropilenoSmooth_43', 'polypropilenoSmooth_44', 'polypropilenoSmooth_45', 'polypropilenoSmooth_46', 'polypropilenoSmooth_48', 'polypropilenoSmooth_49', 'polypropilenoSmooth_50', 'polypropilenoSmooth_51', 'polypropilenoSmooth_52', 'polypropilenoSmooth_54', 'polypropilenoSmooth_55', 'polypropilenoSmooth_56', 'polypropilenoSmooth_57', 'polypropilenoSmooth_58', 'polypropilenoSmooth_59', 'polypropilenoSmooth_60', 'polypropilenoSmooth_61'], ['eva_0', 'eva_2', 'eva_3', 'eva_4', 'eva_5', 'eva_6', 'eva_7', 'eva_8', 'eva_10', 'eva_11', 'eva_12', 'eva_13', 'eva_15', 'eva_16', 'eva_17', 'eva_19', 'eva_20', 'eva_21', 'eva_22', 'eva_23', 'eva_24', 'eva_25', 'eva_28', 'eva_29', 'eva_32', 'eva_33', 'eva_34', 'eva_35', 'eva_36', 'eva_37', 'eva_39', 'eva_40', 'eva_42', 'eva_43', 'eva_44', 'eva_45', 'eva_46', 'eva_48', 'eva_49', 'eva_50', 'eva_51', 'eva_52', 'eva_54', 'eva_55', 'eva_56', 'eva_57', 'eva_58', 'eva_59', 'eva_60', 'eva_61'], ['thinPolypropylene_0', 'thinPolypropylene_2', 'thinPolypropylene_3', 'thinPolypropylene_4', 'thinPolypropylene_5', 'thinPolypropylene_6', 'thinPolypropylene_7', 'thinPolypropylene_8', 'thinPolypropylene_10', 'thinPolypropylene_11', 'thinPolypropylene_12', 'thinPolypropylene_13', 'thinPolypropylene_15', 'thinPolypropylene_16', 'thinPolypropylene_17', 'thinPolypropylene_19', 'thinPolypropylene_20', 'thinPolypropylene_21', 'thinPolypropylene_22', 'thinPolypropylene_23', 'thinPolypropylene_24', 'thinPolypropylene_25', 'thinPolypropylene_28', 'thinPolypropylene_29', 'thinPolypropylene_32', 'thinPolypropylene_33', 'thinPolypropylene_34', 'thinPolypropylene_35', 'thinPolypropylene_36', 'thinPolypropylene_37', 'thinPolypropylene_39', 'thinPolypropylene_40', 'thinPolypropylene_42', 'thinPolypropylene_43', 'thinPolypropylene_44', 'thinPolypropylene_45', 'thinPolypropylene_46', 'thinPolypropylene_48', 'thinPolypropylene_49', 'thinPolypropylene_50', 'thinPolypropylene_51', 'thinPolypropylene_52', 'thinPolypropylene_54', 'thinPolypropylene_55', 'thinPolypropylene_56', 'thinPolypropylene_57', 'thinPolypropylene_58', 'thinPolypropylene_59', 'thinPolypropylene_60', 'thinPolypropylene_61'], ['cuisionFoam_0', 'cuisionFoam_2', 'cuisionFoam_3', 'cuisionFoam_4', 'cuisionFoam_5', 'cuisionFoam_6', 'cuisionFoam_7', 'cuisionFoam_8', 'cuisionFoam_10', 'cuisionFoam_11', 'cuisionFoam_12', 'cuisionFoam_13', 'cuisionFoam_15', 'cuisionFoam_16', 'cuisionFoam_17', 'cuisionFoam_19', 'cuisionFoam_20', 'cuisionFoam_21', 'cuisionFoam_22', 'cuisionFoam_23', 'cuisionFoam_24', 'cuisionFoam_25', 'cuisionFoam_28', 'cuisionFoam_29', 'cuisionFoam_32', 'cuisionFoam_33', 'cuisionFoam_34', 'cuisionFoam_35', 'cuisionFoam_36', 'cuisionFoam_37', 'cuisionFoam_39', 'cuisionFoam_40', 'cuisionFoam_42', 'cuisionFoam_43', 'cuisionFoam_44', 'cuisionFoam_45', 'cuisionFoam_46', 'cuisionFoam_48', 'cuisionFoam_49', 'cuisionFoam_50', 'cuisionFoam_51', 'cuisionFoam_52', 'cuisionFoam_54', 'cuisionFoam_55', 'cuisionFoam_56', 'cuisionFoam_57', 'cuisionFoam_58', 'cuisionFoam_59', 'cuisionFoam_60', 'cuisionFoam_61'], ['fakeLeather_0', 'fakeLeather_2', 'fakeLeather_3', 'fakeLeather_4', 'fakeLeather_5', 'fakeLeather_6', 'fakeLeather_7', 'fakeLeather_8', 'fakeLeather_10', 'fakeLeather_11', 'fakeLeather_12', 'fakeLeather_13', 'fakeLeather_15', 'fakeLeather_16', 'fakeLeather_17', 'fakeLeather_19', 'fakeLeather_20', 'fakeLeather_21', 'fakeLeather_22', 'fakeLeather_23', 'fakeLeather_24', 'fakeLeather_25', 'fakeLeather_28', 'fakeLeather_29', 'fakeLeather_32', 'fakeLeather_33', 'fakeLeather_34', 'fakeLeather_35', 'fakeLeather_36', 'fakeLeather_37', 'fakeLeather_39', 'fakeLeather_40', 'fakeLeather_42', 'fakeLeather_43', 'fakeLeather_44', 'fakeLeather_45', 'fakeLeather_46', 'fakeLeather_48', 'fakeLeather_49', 'fakeLeather_50', 'fakeLeather_51', 'fakeLeather_52', 'fakeLeather_54', 'fakeLeather_55', 'fakeLeather_56', 'fakeLeather_57', 'fakeLeather_58', 'fakeLeather_59', 'fakeLeather_60', 'fakeLeather_61'], ['styrofoam_0', 'styrofoam_2', 'styrofoam_3', 'styrofoam_4', 'styrofoam_5', 'styrofoam_6', 'styrofoam_7', 'styrofoam_8', 'styrofoam_10', 'styrofoam_11', 'styrofoam_12', 'styrofoam_13', 'styrofoam_15', 'styrofoam_16', 'styrofoam_17', 'styrofoam_19', 'styrofoam_20', 'styrofoam_21', 'styrofoam_22', 'styrofoam_23', 'styrofoam_24', 'styrofoam_25', 'styrofoam_28', 'styrofoam_29', 'styrofoam_32', 'styrofoam_33', 'styrofoam_34', 'styrofoam_35', 'styrofoam_36', 'styrofoam_37', 'styrofoam_39', 'styrofoam_40', 'styrofoam_42', 'styrofoam_43', 'styrofoam_44', 'styrofoam_45', 'styrofoam_46', 'styrofoam_48', 'styrofoam_49', 'styrofoam_50', 'styrofoam_51', 'styrofoam_52', 'styrofoam_54', 'styrofoam_55', 'styrofoam_56', 'styrofoam_57', 'styrofoam_58', 'styrofoam_59', 'styrofoam_60', 'styrofoam_61'], ['spongeWhiteSmall_0', 'spongeWhiteSmall_2', 'spongeWhiteSmall_3', 'spongeWhiteSmall_4', 'spongeWhiteSmall_5', 'spongeWhiteSmall_6', 'spongeWhiteSmall_7', 'spongeWhiteSmall_8', 'spongeWhiteSmall_10', 'spongeWhiteSmall_11', 'spongeWhiteSmall_12', 'spongeWhiteSmall_13', 'spongeWhiteSmall_15', 'spongeWhiteSmall_16', 'spongeWhiteSmall_17', 'spongeWhiteSmall_19', 'spongeWhiteSmall_20', 'spongeWhiteSmall_21', 'spongeWhiteSmall_22', 'spongeWhiteSmall_23', 'spongeWhiteSmall_24', 'spongeWhiteSmall_25', 'spongeWhiteSmall_28', 'spongeWhiteSmall_29', 'spongeWhiteSmall_32', 'spongeWhiteSmall_33', 'spongeWhiteSmall_34', 'spongeWhiteSmall_35', 'spongeWhiteSmall_36', 'spongeWhiteSmall_37', 'spongeWhiteSmall_39', 'spongeWhiteSmall_40', 'spongeWhiteSmall_42', 'spongeWhiteSmall_43', 'spongeWhiteSmall_44', 'spongeWhiteSmall_45', 'spongeWhiteSmall_46', 'spongeWhiteSmall_48', 'spongeWhiteSmall_49', 'spongeWhiteSmall_50', 'spongeWhiteSmall_51', 'spongeWhiteSmall_52', 'spongeWhiteSmall_54', 'spongeWhiteSmall_55', 'spongeWhiteSmall_56', 'spongeWhiteSmall_57', 'spongeWhiteSmall_58', 'spongeWhiteSmall_59', 'spongeWhiteSmall_60', 'spongeWhiteSmall_61'], ['yogaMat_0', 'yogaMat_2', 'yogaMat_3', 'yogaMat_4', 'yogaMat_5', 'yogaMat_6', 'yogaMat_7', 'yogaMat_8', 'yogaMat_10', 'yogaMat_11', 'yogaMat_12', 'yogaMat_13', 'yogaMat_15', 'yogaMat_16', 'yogaMat_17', 'yogaMat_19', 'yogaMat_20', 'yogaMat_21', 'yogaMat_22', 'yogaMat_23', 'yogaMat_24', 'yogaMat_25', 'yogaMat_28', 'yogaMat_29', 'yogaMat_32', 'yogaMat_33', 'yogaMat_34', 'yogaMat_35', 'yogaMat_36', 'yogaMat_37', 'yogaMat_39', 'yogaMat_40', 'yogaMat_42', 'yogaMat_43', 'yogaMat_44', 'yogaMat_45', 'yogaMat_46', 'yogaMat_48', 'yogaMat_49', 'yogaMat_50', 'yogaMat_51', 'yogaMat_52', 'yogaMat_54', 'yogaMat_55', 'yogaMat_56', 'yogaMat_57', 'yogaMat_58', 'yogaMat_59', 'yogaMat_60', 'yogaMat_61'], ['cardBoard_0', 'cardBoard_2', 'cardBoard_3', 'cardBoard_4', 'cardBoard_5', 'cardBoard_6', 'cardBoard_7', 'cardBoard_8', 'cardBoard_10', 'cardBoard_11', 'cardBoard_12', 'cardBoard_13', 'cardBoard_15', 'cardBoard_16', 'cardBoard_17', 'cardBoard_19', 'cardBoard_20', 'cardBoard_21', 'cardBoard_22', 'cardBoard_23', 'cardBoard_24', 'cardBoard_25', 'cardBoard_28', 'cardBoard_29', 'cardBoard_32', 'cardBoard_33', 'cardBoard_34', 'cardBoard_35', 'cardBoard_36', 'cardBoard_37', 'cardBoard_39', 'cardBoard_40', 'cardBoard_42', 'cardBoard_43', 'cardBoard_44', 'cardBoard_45', 'cardBoard_46', 'cardBoard_48', 'cardBoard_49', 'cardBoard_50', 'cardBoard_51', 'cardBoard_52', 'cardBoard_54', 'cardBoard_55', 'cardBoard_56', 'cardBoard_57', 'cardBoard_58', 'cardBoard_59', 'cardBoard_60', 'cardBoard_61'], ['cork_0', 'cork_2', 'cork_3', 'cork_4', 'cork_5', 'cork_6', 'cork_7', 'cork_8', 'cork_10', 'cork_11', 'cork_12', 'cork_13', 'cork_15', 'cork_16', 'cork_17', 'cork_19', 'cork_20', 'cork_21', 'cork_22', 'cork_23', 'cork_24', 'cork_25', 'cork_28', 'cork_29', 'cork_32', 'cork_33', 'cork_34', 'cork_35', 'cork_36', 'cork_37', 'cork_39', 'cork_40', 'cork_42', 'cork_43', 'cork_44', 'cork_45', 'cork_46', 'cork_48', 'cork_49', 'cork_50', 'cork_51', 'cork_52', 'cork_54', 'cork_55', 'cork_56', 'cork_57', 'cork_58', 'cork_59', 'cork_60', 'cork_61'], ['denim_0', 'denim_2', 'denim_3', 'denim_4', 'denim_5', 'denim_6', 'denim_7', 'denim_8', 'denim_10', 'denim_11', 'denim_12', 'denim_13', 'denim_15', 'denim_16', 'denim_17', 'denim_19', 'denim_20', 'denim_21', 'denim_22', 'denim_23', 'denim_24', 'denim_25', 'denim_28', 'denim_29', 'denim_32', 'denim_33', 'denim_34', 'denim_35', 'denim_36', 'denim_37', 'denim_39', 'denim_40', 'denim_42', 'denim_43', 'denim_44', 'denim_45', 'denim_46', 'denim_48', 'denim_49', 'denim_50', 'denim_51', 'denim_52', 'denim_54', 'denim_55', 'denim_56', 'denim_57', 'denim_58', 'denim_59', 'denim_60', 'denim_61'], ['softMaterial2_0', 'softMaterial2_2', 'softMaterial2_3', 'softMaterial2_4', 'softMaterial2_5', 'softMaterial2_6', 'softMaterial2_7', 'softMaterial2_8', 'softMaterial2_10', 'softMaterial2_11', 'softMaterial2_12', 'softMaterial2_13', 'softMaterial2_15', 'softMaterial2_16', 'softMaterial2_17', 'softMaterial2_19', 'softMaterial2_20', 'softMaterial2_21', 'softMaterial2_22', 'softMaterial2_23', 'softMaterial2_24', 'softMaterial2_25', 'softMaterial2_28', 'softMaterial2_29', 'softMaterial2_32', 'softMaterial2_33', 'softMaterial2_34', 'softMaterial2_35', 'softMaterial2_36', 'softMaterial2_37', 'softMaterial2_39', 'softMaterial2_40', 'softMaterial2_42', 'softMaterial2_43', 'softMaterial2_44', 'softMaterial2_45', 'softMaterial2_46', 'softMaterial2_48', 'softMaterial2_49', 'softMaterial2_50', 'softMaterial2_51', 'softMaterial2_52', 'softMaterial2_54', 'softMaterial2_55', 'softMaterial2_56', 'softMaterial2_57', 'softMaterial2_58', 'softMaterial2_59', 'softMaterial2_60', 'softMaterial2_61'], ['paper2_0', 'paper2_2', 'paper2_3', 'paper2_4', 'paper2_5', 'paper2_6', 'paper2_7', 'paper2_8', 'paper2_10', 'paper2_11', 'paper2_12', 'paper2_13', 'paper2_15', 'paper2_16', 'paper2_17', 'paper2_19', 'paper2_20', 'paper2_21', 'paper2_22', 'paper2_23', 'paper2_24', 'paper2_25', 'paper2_28', 'paper2_29', 'paper2_32', 'paper2_33', 'paper2_34', 'paper2_35', 'paper2_36', 'paper2_37', 'paper2_39', 'paper2_40', 'paper2_42', 'paper2_43', 'paper2_44', 'paper2_45', 'paper2_46', 'paper2_48', 'paper2_49', 'paper2_50', 'paper2_51', 'paper2_52', 'paper2_54', 'paper2_55', 'paper2_56', 'paper2_57', 'paper2_58', 'paper2_59', 'paper2_60', 'paper2_61'], ['softMaterial1_0', 'softMaterial1_2', 'softMaterial1_3', 'softMaterial1_4', 'softMaterial1_5', 'softMaterial1_6', 'softMaterial1_7', 'softMaterial1_8', 'softMaterial1_10', 'softMaterial1_11', 'softMaterial1_12', 'softMaterial1_13', 'softMaterial1_15', 'softMaterial1_16', 'softMaterial1_17', 'softMaterial1_19', 'softMaterial1_20', 'softMaterial1_21', 'softMaterial1_22', 'softMaterial1_23', 'softMaterial1_24', 'softMaterial1_25', 'softMaterial1_28', 'softMaterial1_29', 'softMaterial1_32', 'softMaterial1_33', 'softMaterial1_34', 'softMaterial1_35', 'softMaterial1_36', 'softMaterial1_37', 'softMaterial1_39', 'softMaterial1_40', 'softMaterial1_42', 'softMaterial1_43', 'softMaterial1_44', 'softMaterial1_45', 'softMaterial1_46', 'softMaterial1_48', 'softMaterial1_49', 'softMaterial1_50', 'softMaterial1_51', 'softMaterial1_52', 'softMaterial1_54', 'softMaterial1_55', 'softMaterial1_56', 'softMaterial1_57', 'softMaterial1_58', 'softMaterial1_59', 'softMaterial1_60', 'softMaterial1_61'], ['woodHard_0', 'woodHard_2', 'woodHard_3', 'woodHard_4', 'woodHard_5', 'woodHard_6', 'woodHard_7', 'woodHard_8', 'woodHard_10', 'woodHard_11', 'woodHard_12', 'woodHard_13', 'woodHard_15', 'woodHard_16', 'woodHard_17', 'woodHard_19', 'woodHard_20', 'woodHard_21', 'woodHard_22', 'woodHard_23', 'woodHard_24', 'woodHard_25', 'woodHard_28', 'woodHard_29', 'woodHard_32', 'woodHard_33', 'woodHard_34', 'woodHard_35', 'woodHard_36', 'woodHard_37', 'woodHard_39', 'woodHard_40', 'woodHard_42', 'woodHard_43', 'woodHard_44', 'woodHard_45', 'woodHard_46', 'woodHard_48', 'woodHard_49', 'woodHard_50', 'woodHard_51', 'woodHard_52', 'woodHard_54', 'woodHard_55', 'woodHard_56', 'woodHard_57', 'woodHard_58', 'woodHard_59', 'woodHard_60', 'woodHard_61'], ['bathTowel_0', 'bathTowel_2', 'bathTowel_3', 'bathTowel_4', 'bathTowel_5', 'bathTowel_6', 'bathTowel_7', 'bathTowel_8', 'bathTowel_10', 'bathTowel_11', 'bathTowel_12', 'bathTowel_13', 'bathTowel_15', 'bathTowel_16', 'bathTowel_17', 'bathTowel_19', 'bathTowel_20', 'bathTowel_21', 'bathTowel_22', 'bathTowel_23', 'bathTowel_24', 'bathTowel_25', 'bathTowel_28', 'bathTowel_29', 'bathTowel_32', 'bathTowel_33', 'bathTowel_34', 'bathTowel_35', 'bathTowel_36', 'bathTowel_37', 'bathTowel_39', 'bathTowel_40', 'bathTowel_42', 'bathTowel_43', 'bathTowel_44', 'bathTowel_45', 'bathTowel_46', 'bathTowel_48', 'bathTowel_49', 'bathTowel_50', 'bathTowel_51', 'bathTowel_52', 'bathTowel_54', 'bathTowel_55', 'bathTowel_56', 'bathTowel_57', 'bathTowel_58', 'bathTowel_59', 'bathTowel_60', 'bathTowel_61'], ['paper1_0', 'paper1_2', 'paper1_3', 'paper1_4', 'paper1_5', 'paper1_6', 'paper1_7', 'paper1_8', 'paper1_10', 'paper1_11', 'paper1_12', 'paper1_13', 'paper1_15', 'paper1_16', 'paper1_17', 'paper1_19', 'paper1_20', 'paper1_21', 'paper1_22', 'paper1_23', 'paper1_24', 'paper1_25', 'paper1_28', 'paper1_29', 'paper1_32', 'paper1_33', 'paper1_34', 'paper1_35', 'paper1_36', 'paper1_37', 'paper1_39', 'paper1_40', 'paper1_42', 'paper1_43', 'paper1_44', 'paper1_45', 'paper1_46', 'paper1_48', 'paper1_49', 'paper1_50', 'paper1_51', 'paper1_52', 'paper1_54', 'paper1_55', 'paper1_56', 'paper1_57', 'paper1_58', 'paper1_59', 'paper1_60', 'paper1_61'], ['carpetNet_0', 'carpetNet_2', 'carpetNet_3', 'carpetNet_4', 'carpetNet_5', 'carpetNet_6', 'carpetNet_7', 'carpetNet_8', 'carpetNet_10', 'carpetNet_11', 'carpetNet_12', 'carpetNet_13', 'carpetNet_15', 'carpetNet_16', 'carpetNet_17', 'carpetNet_19', 'carpetNet_20', 'carpetNet_21', 'carpetNet_22', 'carpetNet_23', 'carpetNet_24', 'carpetNet_25', 'carpetNet_28', 'carpetNet_29', 'carpetNet_32', 'carpetNet_33', 'carpetNet_34', 'carpetNet_35', 'carpetNet_36', 'carpetNet_37', 'carpetNet_39', 'carpetNet_40', 'carpetNet_42', 'carpetNet_43', 'carpetNet_44', 'carpetNet_45', 'carpetNet_46', 'carpetNet_48', 'carpetNet_49', 'carpetNet_50', 'carpetNet_51', 'carpetNet_52', 'carpetNet_54', 'carpetNet_55', 'carpetNet_56', 'carpetNet_57', 'carpetNet_58', 'carpetNet_59', 'carpetNet_60', 'carpetNet_61'], ['metal_0', 'metal_2', 'metal_3', 'metal_4', 'metal_5', 'metal_6', 'metal_7', 'metal_8', 'metal_10', 'metal_11', 'metal_12', 'metal_13', 'metal_15', 'metal_16', 'metal_17', 'metal_19', 'metal_20', 'metal_21', 'metal_22', 'metal_23', 'metal_24', 'metal_25', 'metal_28', 'metal_29', 'metal_32', 'metal_33', 'metal_34', 'metal_35', 'metal_36', 'metal_37', 'metal_39', 'metal_40', 'metal_42', 'metal_43', 'metal_44', 'metal_45', 'metal_46', 'metal_48', 'metal_49', 'metal_50', 'metal_51', 'metal_52', 'metal_54', 'metal_55', 'metal_56', 'metal_57', 'metal_58', 'metal_59', 'metal_60', 'metal_61'], ['felt_0', 'felt_2', 'felt_3', 'felt_4', 'felt_5', 'felt_6', 'felt_7', 'felt_8', 'felt_10', 'felt_11', 'felt_12', 'felt_13', 'felt_15', 'felt_16', 'felt_17', 'felt_19', 'felt_20', 'felt_21', 'felt_22', 'felt_23', 'felt_24', 'felt_25', 'felt_28', 'felt_29', 'felt_32', 'felt_33', 'felt_34', 'felt_35', 'felt_36', 'felt_37', 'felt_39', 'felt_40', 'felt_42', 'felt_43', 'felt_44', 'felt_45', 'felt_46', 'felt_48', 'felt_49', 'felt_50', 'felt_51', 'felt_52', 'felt_54', 'felt_55', 'felt_56', 'felt_57', 'felt_58', 'felt_59', 'felt_60', 'felt_61'], ['cotton_0', 'cotton_2', 'cotton_3', 'cotton_4', 'cotton_5', 'cotton_6', 'cotton_7', 'cotton_8', 'cotton_10', 'cotton_11', 'cotton_12', 'cotton_13', 'cotton_15', 'cotton_16', 'cotton_17', 'cotton_19', 'cotton_20', 'cotton_21', 'cotton_22', 'cotton_23', 'cotton_24', 'cotton_25', 'cotton_28', 'cotton_29', 'cotton_32', 'cotton_33', 'cotton_34', 'cotton_35', 'cotton_36', 'cotton_37', 'cotton_39', 'cotton_40', 'cotton_42', 'cotton_43', 'cotton_44', 'cotton_45', 'cotton_46', 'cotton_48', 'cotton_49', 'cotton_50', 'cotton_51', 'cotton_52', 'cotton_54', 'cotton_55', 'cotton_56', 'cotton_57', 'cotton_58', 'cotton_59', 'cotton_60', 'cotton_61'], ['fiberBoard_0', 'fiberBoard_2', 'fiberBoard_3', 'fiberBoard_4', 'fiberBoard_5', 'fiberBoard_6', 'fiberBoard_7', 'fiberBoard_8', 'fiberBoard_10', 'fiberBoard_11', 'fiberBoard_12', 'fiberBoard_13', 'fiberBoard_15', 'fiberBoard_16', 'fiberBoard_17', 'fiberBoard_19', 'fiberBoard_20', 'fiberBoard_21', 'fiberBoard_22', 'fiberBoard_23', 'fiberBoard_24', 'fiberBoard_25', 'fiberBoard_28', 'fiberBoard_29', 'fiberBoard_32', 'fiberBoard_33', 'fiberBoard_34', 'fiberBoard_35', 'fiberBoard_36', 'fiberBoard_37', 'fiberBoard_39', 'fiberBoard_40', 'fiberBoard_42', 'fiberBoard_43', 'fiberBoard_44', 'fiberBoard_45', 'fiberBoard_46', 'fiberBoard_48', 'fiberBoard_49', 'fiberBoard_50', 'fiberBoard_51', 'fiberBoard_52', 'fiberBoard_54', 'fiberBoard_55', 'fiberBoard_56', 'fiberBoard_57', 'fiberBoard_58', 'fiberBoard_59', 'fiberBoard_60', 'fiberBoard_61']]
+2019-11-18 14:05:39,255 - __main__ - INFO - load datasets (23, 50, 6, 10, 75) (23, 50) (23, 12, 6, 10, 75) (23, 12)
+2019-11-18 14:05:39,255 - __main__ - INFO - -----------------------------------
+2019-11-18 14:05:39,255 - __main__ - INFO - period = 0
+2019-11-18 14:05:39,255 - __main__ - INFO - new classes: [0 1 2 3 4 5 6 7]
+2019-11-18 14:05:39,260 - __main__ - INFO - training size = 400
+2019-11-18 14:05:39,260 - __main__ - INFO - current lr = 0.001000
+2019-11-18 14:05:40,179 - __main__ - INFO - Training Period: 0 	 Iter: 0 	 time = 13.4 	 loss = 0.087894 	 acc = 0.0000
+2019-11-18 14:05:40,275 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 0 	 time = 1.4 						 acc = 0.2083
+2019-11-18 14:05:41,180 - __main__ - INFO - Training Period: 0 	 Iter: 1 	 time = 13.5 	 loss = 0.085282 	 acc = 0.0000
+2019-11-18 14:05:41,270 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 1 	 time = 1.3 						 acc = 0.3542
+2019-11-18 14:05:42,168 - __main__ - INFO - Training Period: 0 	 Iter: 2 	 time = 13.4 	 loss = 0.079267 	 acc = 0.0000
+2019-11-18 14:05:42,257 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 2 	 time = 1.3 						 acc = 0.4062
+2019-11-18 14:05:43,151 - __main__ - INFO - Training Period: 0 	 Iter: 3 	 time = 13.4 	 loss = 0.068239 	 acc = 0.0000
+2019-11-18 14:05:43,243 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 3 	 time = 1.4 						 acc = 0.3333
+2019-11-18 14:05:44,159 - __main__ - INFO - Training Period: 0 	 Iter: 4 	 time = 13.6 	 loss = 0.061325 	 acc = 0.0000
+2019-11-18 14:05:44,249 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 4 	 time = 1.3 						 acc = 0.4375
+2019-11-18 14:05:45,156 - __main__ - INFO - Training Period: 0 	 Iter: 5 	 time = 13.6 	 loss = 0.056986 	 acc = 0.0000
+2019-11-18 14:05:45,247 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 5 	 time = 1.4 						 acc = 0.5833
+2019-11-18 14:05:46,151 - __main__ - INFO - Training Period: 0 	 Iter: 6 	 time = 13.5 	 loss = 0.050843 	 acc = 0.0000
+2019-11-18 14:05:46,242 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 6 	 time = 1.4 						 acc = 0.6042
+2019-11-18 14:05:47,152 - __main__ - INFO - Training Period: 0 	 Iter: 7 	 time = 13.6 	 loss = 0.044163 	 acc = 0.0000
+2019-11-18 14:05:47,242 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 7 	 time = 1.3 						 acc = 0.6979
+2019-11-18 14:05:48,141 - __main__ - INFO - Training Period: 0 	 Iter: 8 	 time = 13.4 	 loss = 0.045485 	 acc = 0.0000
+2019-11-18 14:05:48,231 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 8 	 time = 1.3 						 acc = 0.5729
+2019-11-18 14:05:49,133 - __main__ - INFO - Training Period: 0 	 Iter: 9 	 time = 13.5 	 loss = 0.037405 	 acc = 0.0000
+2019-11-18 14:05:49,222 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 9 	 time = 1.3 						 acc = 0.8854
+2019-11-18 14:05:50,131 - __main__ - INFO - Training Period: 0 	 Iter: 10 	 time = 13.6 	 loss = 0.033761 	 acc = 0.0000
+2019-11-18 14:05:50,223 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 10 	 time = 1.4 						 acc = 0.8125
+2019-11-18 14:05:51,134 - __main__ - INFO - Training Period: 0 	 Iter: 11 	 time = 13.6 	 loss = 0.032217 	 acc = 0.0000
+2019-11-18 14:05:51,223 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 11 	 time = 1.3 						 acc = 0.6667
+2019-11-18 14:05:52,137 - __main__ - INFO - Training Period: 0 	 Iter: 12 	 time = 13.6 	 loss = 0.031479 	 acc = 0.0000
+2019-11-18 14:05:52,227 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 12 	 time = 1.3 						 acc = 0.8021
+2019-11-18 14:05:53,135 - __main__ - INFO - Training Period: 0 	 Iter: 13 	 time = 13.5 	 loss = 0.029427 	 acc = 0.0000
+2019-11-18 14:05:53,227 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 13 	 time = 1.4 						 acc = 0.8438
+2019-11-18 14:05:54,121 - __main__ - INFO - Training Period: 0 	 Iter: 14 	 time = 13.4 	 loss = 0.023343 	 acc = 0.0000
+2019-11-18 14:05:54,214 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 14 	 time = 1.4 						 acc = 0.8646
+2019-11-18 14:05:55,107 - __main__ - INFO - Training Period: 0 	 Iter: 15 	 time = 13.3 	 loss = 0.020707 	 acc = 0.0000
+2019-11-18 14:05:55,198 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 15 	 time = 1.4 						 acc = 0.9479
+2019-11-18 14:05:56,008 - __main__ - INFO - Training Period: 0 	 Iter: 16 	 time = 12.1 	 loss = 0.019827 	 acc = 0.0000
+2019-11-18 14:05:56,076 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 16 	 time = 1.0 						 acc = 0.8646
+2019-11-18 14:05:56,762 - __main__ - INFO - Training Period: 0 	 Iter: 17 	 time = 10.2 	 loss = 0.023225 	 acc = 0.0000
+2019-11-18 14:05:56,830 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 17 	 time = 1.0 						 acc = 0.8646
+2019-11-18 14:05:57,518 - __main__ - INFO - Training Period: 0 	 Iter: 18 	 time = 10.3 	 loss = 0.017488 	 acc = 0.0000
+2019-11-18 14:05:57,587 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 18 	 time = 1.0 						 acc = 0.9375
+2019-11-18 14:05:58,266 - __main__ - INFO - Training Period: 0 	 Iter: 19 	 time = 10.1 	 loss = 0.014323 	 acc = 0.0000
+2019-11-18 14:05:58,335 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 19 	 time = 1.0 						 acc = 0.9062
+2019-11-18 14:05:59,282 - __main__ - INFO - Training Period: 0 	 Iter: 20 	 time = 14.1 	 loss = 0.012207 	 acc = 0.0000
+2019-11-18 14:05:59,373 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 20 	 time = 1.4 						 acc = 0.9479
+2019-11-18 14:06:00,274 - __main__ - INFO - Training Period: 0 	 Iter: 21 	 time = 13.4 	 loss = 0.011712 	 acc = 0.0000
+2019-11-18 14:06:00,368 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 21 	 time = 1.4 						 acc = 0.8958
+2019-11-18 14:06:01,272 - __main__ - INFO - Training Period: 0 	 Iter: 22 	 time = 13.5 	 loss = 0.012122 	 acc = 0.0000
+2019-11-18 14:06:01,365 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 22 	 time = 1.4 						 acc = 0.9375
+2019-11-18 14:06:02,304 - __main__ - INFO - Training Period: 0 	 Iter: 23 	 time = 14.0 	 loss = 0.014048 	 acc = 0.0000
+2019-11-18 14:06:02,397 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 23 	 time = 1.4 						 acc = 0.9375
+2019-11-18 14:06:03,288 - __main__ - INFO - Training Period: 0 	 Iter: 24 	 time = 13.3 	 loss = 0.012154 	 acc = 0.0000
+2019-11-18 14:06:03,379 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 24 	 time = 1.3 						 acc = 0.9688
+2019-11-18 14:06:04,272 - __main__ - INFO - Training Period: 0 	 Iter: 25 	 time = 13.3 	 loss = 0.009929 	 acc = 0.0000
+2019-11-18 14:06:04,363 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 25 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:06:05,284 - __main__ - INFO - Training Period: 0 	 Iter: 26 	 time = 13.7 	 loss = 0.007753 	 acc = 0.0000
+2019-11-18 14:06:05,375 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 26 	 time = 1.4 						 acc = 0.9271
+2019-11-18 14:06:06,268 - __main__ - INFO - Training Period: 0 	 Iter: 27 	 time = 13.3 	 loss = 0.009288 	 acc = 0.0000
+2019-11-18 14:06:06,358 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 27 	 time = 1.3 						 acc = 0.9271
+2019-11-18 14:06:07,256 - __main__ - INFO - Training Period: 0 	 Iter: 28 	 time = 13.4 	 loss = 0.008634 	 acc = 0.0000
+2019-11-18 14:06:07,349 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 28 	 time = 1.4 						 acc = 0.8958
+2019-11-18 14:06:08,257 - __main__ - INFO - Training Period: 0 	 Iter: 29 	 time = 13.6 	 loss = 0.009725 	 acc = 0.0000
+2019-11-18 14:06:08,350 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 29 	 time = 1.4 						 acc = 0.9688
+2019-11-18 14:06:09,250 - __main__ - INFO - Training Period: 0 	 Iter: 30 	 time = 13.4 	 loss = 0.008597 	 acc = 0.0000
+2019-11-18 14:06:09,343 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 30 	 time = 1.4 						 acc = 0.9583
+2019-11-18 14:06:10,240 - __main__ - INFO - Training Period: 0 	 Iter: 31 	 time = 13.4 	 loss = 0.006894 	 acc = 0.0000
+2019-11-18 14:06:10,331 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 31 	 time = 1.4 						 acc = 0.9271
+2019-11-18 14:06:11,234 - __main__ - INFO - Training Period: 0 	 Iter: 32 	 time = 13.5 	 loss = 0.009734 	 acc = 0.0000
+2019-11-18 14:06:11,326 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 32 	 time = 1.4 						 acc = 0.8854
+2019-11-18 14:06:12,233 - __main__ - INFO - Training Period: 0 	 Iter: 33 	 time = 13.5 	 loss = 0.011599 	 acc = 0.0000
+2019-11-18 14:06:12,325 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 33 	 time = 1.4 						 acc = 0.9271
+2019-11-18 14:06:13,221 - __main__ - INFO - Training Period: 0 	 Iter: 34 	 time = 13.4 	 loss = 0.005929 	 acc = 0.0000
+2019-11-18 14:06:13,314 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 34 	 time = 1.4 						 acc = 0.9583
+2019-11-18 14:06:14,224 - __main__ - INFO - Training Period: 0 	 Iter: 35 	 time = 13.6 	 loss = 0.006248 	 acc = 0.0000
+2019-11-18 14:06:14,314 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 35 	 time = 1.3 						 acc = 0.9896
+2019-11-18 14:06:15,214 - __main__ - INFO - Training Period: 0 	 Iter: 36 	 time = 13.4 	 loss = 0.006716 	 acc = 0.0000
+2019-11-18 14:06:15,308 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 36 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:16,211 - __main__ - INFO - Training Period: 0 	 Iter: 37 	 time = 13.5 	 loss = 0.005862 	 acc = 0.0000
+2019-11-18 14:06:16,303 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 37 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:17,214 - __main__ - INFO - Training Period: 0 	 Iter: 38 	 time = 13.6 	 loss = 0.006815 	 acc = 0.0000
+2019-11-18 14:06:17,306 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 38 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:06:18,204 - __main__ - INFO - Training Period: 0 	 Iter: 39 	 time = 13.4 	 loss = 0.007556 	 acc = 0.0000
+2019-11-18 14:06:18,295 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 39 	 time = 1.4 						 acc = 0.9688
+2019-11-18 14:06:19,190 - __main__ - INFO - Training Period: 0 	 Iter: 40 	 time = 13.4 	 loss = 0.008055 	 acc = 0.0000
+2019-11-18 14:06:19,281 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 40 	 time = 1.4 						 acc = 0.9479
+2019-11-18 14:06:20,099 - __main__ - INFO - Training Period: 0 	 Iter: 41 	 time = 12.2 	 loss = 0.005347 	 acc = 0.0000
+2019-11-18 14:06:20,187 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 41 	 time = 1.3 						 acc = 0.9792
+2019-11-18 14:06:21,085 - __main__ - INFO - Training Period: 0 	 Iter: 42 	 time = 13.4 	 loss = 0.005309 	 acc = 0.0000
+2019-11-18 14:06:21,180 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 42 	 time = 1.4 						 acc = 0.9583
+2019-11-18 14:06:22,079 - __main__ - INFO - Training Period: 0 	 Iter: 43 	 time = 13.4 	 loss = 0.006644 	 acc = 0.0000
+2019-11-18 14:06:22,174 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 43 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:06:23,084 - __main__ - INFO - Training Period: 0 	 Iter: 44 	 time = 13.6 	 loss = 0.005061 	 acc = 0.0000
+2019-11-18 14:06:23,177 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 44 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:24,075 - __main__ - INFO - Training Period: 0 	 Iter: 45 	 time = 13.4 	 loss = 0.004686 	 acc = 0.0000
+2019-11-18 14:06:24,172 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 45 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:25,067 - __main__ - INFO - Training Period: 0 	 Iter: 46 	 time = 13.4 	 loss = 0.006138 	 acc = 0.0000
+2019-11-18 14:06:25,159 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 46 	 time = 1.4 						 acc = 0.9167
+2019-11-18 14:06:26,059 - __main__ - INFO - Training Period: 0 	 Iter: 47 	 time = 13.5 	 loss = 0.008853 	 acc = 0.0000
+2019-11-18 14:06:26,153 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 47 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:06:27,058 - __main__ - INFO - Training Period: 0 	 Iter: 48 	 time = 13.5 	 loss = 0.004076 	 acc = 0.0000
+2019-11-18 14:06:27,151 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 48 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:28,045 - __main__ - INFO - Training Period: 0 	 Iter: 49 	 time = 13.4 	 loss = 0.003351 	 acc = 0.0000
+2019-11-18 14:06:28,140 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 49 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:28,140 - __main__ - INFO - iteration 50, current lr= 0.0005
+2019-11-18 14:06:29,044 - __main__ - INFO - Training Period: 0 	 Iter: 50 	 time = 13.5 	 loss = 0.002560 	 acc = 0.0000
+2019-11-18 14:06:29,137 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 50 	 time = 1.4 						 acc = 0.9583
+2019-11-18 14:06:30,040 - __main__ - INFO - Training Period: 0 	 Iter: 51 	 time = 13.5 	 loss = 0.002886 	 acc = 0.0000
+2019-11-18 14:06:30,134 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 51 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:31,038 - __main__ - INFO - Training Period: 0 	 Iter: 52 	 time = 13.5 	 loss = 0.002244 	 acc = 0.0000
+2019-11-18 14:06:31,131 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 52 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:32,034 - __main__ - INFO - Training Period: 0 	 Iter: 53 	 time = 13.5 	 loss = 0.002364 	 acc = 0.0000
+2019-11-18 14:06:32,130 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 53 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:33,024 - __main__ - INFO - Training Period: 0 	 Iter: 54 	 time = 13.4 	 loss = 0.002562 	 acc = 0.0000
+2019-11-18 14:06:33,118 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 54 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:34,016 - __main__ - INFO - Training Period: 0 	 Iter: 55 	 time = 13.4 	 loss = 0.003653 	 acc = 0.0000
+2019-11-18 14:06:34,107 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 55 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:35,013 - __main__ - INFO - Training Period: 0 	 Iter: 56 	 time = 13.5 	 loss = 0.002708 	 acc = 0.0000
+2019-11-18 14:06:35,107 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 56 	 time = 1.4 						 acc = 0.9583
+2019-11-18 14:06:36,002 - __main__ - INFO - Training Period: 0 	 Iter: 57 	 time = 13.4 	 loss = 0.001549 	 acc = 0.0000
+2019-11-18 14:06:36,094 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 57 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:36,990 - __main__ - INFO - Training Period: 0 	 Iter: 58 	 time = 13.4 	 loss = 0.003185 	 acc = 0.0000
+2019-11-18 14:06:37,087 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 58 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:37,987 - __main__ - INFO - Training Period: 0 	 Iter: 59 	 time = 13.4 	 loss = 0.002847 	 acc = 0.0000
+2019-11-18 14:06:38,081 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 59 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:06:38,989 - __main__ - INFO - Training Period: 0 	 Iter: 60 	 time = 13.6 	 loss = 0.002627 	 acc = 0.0000
+2019-11-18 14:06:39,083 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 60 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:06:39,979 - __main__ - INFO - Training Period: 0 	 Iter: 61 	 time = 13.4 	 loss = 0.001743 	 acc = 0.0000
+2019-11-18 14:06:40,071 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 61 	 time = 1.4 						 acc = 0.9688
+2019-11-18 14:06:40,972 - __main__ - INFO - Training Period: 0 	 Iter: 62 	 time = 13.4 	 loss = 0.002545 	 acc = 0.0000
+2019-11-18 14:06:41,070 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 62 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:41,971 - __main__ - INFO - Training Period: 0 	 Iter: 63 	 time = 13.5 	 loss = 0.003317 	 acc = 0.0000
+2019-11-18 14:06:42,066 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 63 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:42,962 - __main__ - INFO - Training Period: 0 	 Iter: 64 	 time = 13.4 	 loss = 0.001901 	 acc = 0.0000
+2019-11-18 14:06:43,056 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 64 	 time = 1.4 						 acc = 0.9688
+2019-11-18 14:06:43,951 - __main__ - INFO - Training Period: 0 	 Iter: 65 	 time = 13.4 	 loss = 0.001371 	 acc = 0.0000
+2019-11-18 14:06:44,048 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 65 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:44,949 - __main__ - INFO - Training Period: 0 	 Iter: 66 	 time = 13.5 	 loss = 0.001825 	 acc = 0.0000
+2019-11-18 14:06:45,043 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 66 	 time = 1.4 						 acc = 0.9688
+2019-11-18 14:06:45,937 - __main__ - INFO - Training Period: 0 	 Iter: 67 	 time = 13.4 	 loss = 0.001386 	 acc = 0.0000
+2019-11-18 14:06:46,030 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 67 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:46,926 - __main__ - INFO - Training Period: 0 	 Iter: 68 	 time = 13.4 	 loss = 0.002839 	 acc = 0.0000
+2019-11-18 14:06:47,027 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 68 	 time = 1.5 						 acc = 1.0000
+2019-11-18 14:06:47,942 - __main__ - INFO - Training Period: 0 	 Iter: 69 	 time = 13.7 	 loss = 0.002965 	 acc = 0.0000
+2019-11-18 14:06:48,036 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 69 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:48,939 - __main__ - INFO - Training Period: 0 	 Iter: 70 	 time = 13.5 	 loss = 0.002399 	 acc = 0.0000
+2019-11-18 14:06:49,032 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 70 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:49,933 - __main__ - INFO - Training Period: 0 	 Iter: 71 	 time = 13.5 	 loss = 0.002518 	 acc = 0.0000
+2019-11-18 14:06:50,031 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 71 	 time = 1.5 						 acc = 1.0000
+2019-11-18 14:06:50,938 - __main__ - INFO - Training Period: 0 	 Iter: 72 	 time = 13.5 	 loss = 0.001470 	 acc = 0.0000
+2019-11-18 14:06:51,034 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 72 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:51,932 - __main__ - INFO - Training Period: 0 	 Iter: 73 	 time = 13.4 	 loss = 0.002439 	 acc = 0.0000
+2019-11-18 14:06:52,024 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 73 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:06:52,920 - __main__ - INFO - Training Period: 0 	 Iter: 74 	 time = 13.4 	 loss = 0.004101 	 acc = 0.0000
+2019-11-18 14:06:53,014 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 74 	 time = 1.4 						 acc = 0.9688
+2019-11-18 14:06:53,917 - __main__ - INFO - Training Period: 0 	 Iter: 75 	 time = 13.5 	 loss = 0.002114 	 acc = 0.0000
+2019-11-18 14:06:54,007 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 75 	 time = 1.3 						 acc = 1.0000
+2019-11-18 14:06:54,902 - __main__ - INFO - Training Period: 0 	 Iter: 76 	 time = 13.4 	 loss = 0.002575 	 acc = 0.0000
+2019-11-18 14:06:54,994 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 76 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:55,892 - __main__ - INFO - Training Period: 0 	 Iter: 77 	 time = 13.4 	 loss = 0.001567 	 acc = 0.0000
+2019-11-18 14:06:55,986 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 77 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:06:56,767 - __main__ - INFO - Training Period: 0 	 Iter: 78 	 time = 11.7 	 loss = 0.001341 	 acc = 0.0000
+2019-11-18 14:06:56,837 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 78 	 time = 1.0 						 acc = 1.0000
+2019-11-18 14:06:57,520 - __main__ - INFO - Training Period: 0 	 Iter: 79 	 time = 10.2 	 loss = 0.001354 	 acc = 0.0000
+2019-11-18 14:06:57,589 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 79 	 time = 1.0 						 acc = 0.9896
+2019-11-18 14:06:58,284 - __main__ - INFO - Training Period: 0 	 Iter: 80 	 time = 10.4 	 loss = 0.001316 	 acc = 0.0000
+2019-11-18 14:06:58,352 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 80 	 time = 1.0 						 acc = 1.0000
+2019-11-18 14:06:59,030 - __main__ - INFO - Training Period: 0 	 Iter: 81 	 time = 10.1 	 loss = 0.002582 	 acc = 0.0000
+2019-11-18 14:06:59,108 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 81 	 time = 1.2 						 acc = 0.9896
+2019-11-18 14:07:00,015 - __main__ - INFO - Training Period: 0 	 Iter: 82 	 time = 13.5 	 loss = 0.001643 	 acc = 0.0000
+2019-11-18 14:07:00,109 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 82 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:01,011 - __main__ - INFO - Training Period: 0 	 Iter: 83 	 time = 13.5 	 loss = 0.000677 	 acc = 0.0000
+2019-11-18 14:07:01,104 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 83 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:07:02,006 - __main__ - INFO - Training Period: 0 	 Iter: 84 	 time = 13.5 	 loss = 0.001549 	 acc = 0.0000
+2019-11-18 14:07:02,098 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 84 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:03,015 - __main__ - INFO - Training Period: 0 	 Iter: 85 	 time = 13.7 	 loss = 0.001701 	 acc = 0.0000
+2019-11-18 14:07:03,109 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 85 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:04,003 - __main__ - INFO - Training Period: 0 	 Iter: 86 	 time = 13.4 	 loss = 0.002388 	 acc = 0.0000
+2019-11-18 14:07:04,098 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 86 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:04,997 - __main__ - INFO - Training Period: 0 	 Iter: 87 	 time = 13.4 	 loss = 0.000446 	 acc = 0.0000
+2019-11-18 14:07:05,092 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 87 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:05,997 - __main__ - INFO - Training Period: 0 	 Iter: 88 	 time = 13.5 	 loss = 0.000859 	 acc = 0.0000
+2019-11-18 14:07:06,089 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 88 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:06,990 - __main__ - INFO - Training Period: 0 	 Iter: 89 	 time = 13.5 	 loss = 0.000888 	 acc = 0.0000
+2019-11-18 14:07:07,081 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 89 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:07,977 - __main__ - INFO - Training Period: 0 	 Iter: 90 	 time = 13.4 	 loss = 0.001578 	 acc = 0.0000
+2019-11-18 14:07:08,070 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 90 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:08,978 - __main__ - INFO - Training Period: 0 	 Iter: 91 	 time = 13.5 	 loss = 0.002039 	 acc = 0.0000
+2019-11-18 14:07:09,071 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 91 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:09,969 - __main__ - INFO - Training Period: 0 	 Iter: 92 	 time = 13.4 	 loss = 0.001148 	 acc = 0.0000
+2019-11-18 14:07:10,062 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 92 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:10,958 - __main__ - INFO - Training Period: 0 	 Iter: 93 	 time = 13.4 	 loss = 0.001209 	 acc = 0.0000
+2019-11-18 14:07:11,052 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 93 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:07:11,956 - __main__ - INFO - Training Period: 0 	 Iter: 94 	 time = 13.5 	 loss = 0.003706 	 acc = 0.0000
+2019-11-18 14:07:12,050 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 94 	 time = 1.4 						 acc = 0.9688
+2019-11-18 14:07:12,950 - __main__ - INFO - Training Period: 0 	 Iter: 95 	 time = 13.4 	 loss = 0.003542 	 acc = 0.0000
+2019-11-18 14:07:13,042 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 95 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:07:13,947 - __main__ - INFO - Training Period: 0 	 Iter: 96 	 time = 13.5 	 loss = 0.001989 	 acc = 0.0000
+2019-11-18 14:07:14,039 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 96 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:14,944 - __main__ - INFO - Training Period: 0 	 Iter: 97 	 time = 13.5 	 loss = 0.002059 	 acc = 0.0000
+2019-11-18 14:07:15,037 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 97 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:07:15,937 - __main__ - INFO - Training Period: 0 	 Iter: 98 	 time = 13.4 	 loss = 0.002051 	 acc = 0.0000
+2019-11-18 14:07:16,029 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 98 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:16,925 - __main__ - INFO - Training Period: 0 	 Iter: 99 	 time = 13.4 	 loss = 0.000223 	 acc = 1.0000
+2019-11-18 14:07:17,017 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 99 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:17,017 - __main__ - INFO - iteration 100, current lr= 0.00025
+2019-11-18 14:07:17,924 - __main__ - INFO - Training Period: 0 	 Iter: 100 	 time = 13.5 	 loss = 0.000293 	 acc = 0.0000
+2019-11-18 14:07:18,016 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 100 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:18,915 - __main__ - INFO - Training Period: 0 	 Iter: 101 	 time = 13.4 	 loss = 0.000151 	 acc = 0.0000
+2019-11-18 14:07:19,008 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 101 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:19,902 - __main__ - INFO - Training Period: 0 	 Iter: 102 	 time = 13.4 	 loss = 0.000799 	 acc = 0.0000
+2019-11-18 14:07:19,994 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 102 	 time = 1.4 						 acc = 0.9792
+2019-11-18 14:07:20,898 - __main__ - INFO - Training Period: 0 	 Iter: 103 	 time = 13.5 	 loss = 0.001544 	 acc = 0.0000
+2019-11-18 14:07:20,992 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 103 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:21,886 - __main__ - INFO - Training Period: 0 	 Iter: 104 	 time = 13.4 	 loss = 0.002052 	 acc = 0.0000
+2019-11-18 14:07:21,978 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 104 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:22,876 - __main__ - INFO - Training Period: 0 	 Iter: 105 	 time = 13.4 	 loss = 0.000123 	 acc = 1.0000
+2019-11-18 14:07:22,967 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 105 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:23,869 - __main__ - INFO - Training Period: 0 	 Iter: 106 	 time = 13.5 	 loss = 0.000379 	 acc = 0.0000
+2019-11-18 14:07:23,964 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 106 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:24,869 - __main__ - INFO - Training Period: 0 	 Iter: 107 	 time = 13.5 	 loss = 0.000747 	 acc = 0.0000
+2019-11-18 14:07:24,962 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 107 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:25,858 - __main__ - INFO - Training Period: 0 	 Iter: 108 	 time = 13.4 	 loss = 0.000212 	 acc = 0.0000
+2019-11-18 14:07:25,949 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 108 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:26,856 - __main__ - INFO - Training Period: 0 	 Iter: 109 	 time = 13.5 	 loss = 0.000220 	 acc = 0.0000
+2019-11-18 14:07:26,950 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 109 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:27,856 - __main__ - INFO - Training Period: 0 	 Iter: 110 	 time = 13.5 	 loss = 0.001491 	 acc = 0.0000
+2019-11-18 14:07:27,951 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 110 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:28,856 - __main__ - INFO - Training Period: 0 	 Iter: 111 	 time = 13.5 	 loss = 0.001138 	 acc = 0.0000
+2019-11-18 14:07:28,950 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 111 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:29,869 - __main__ - INFO - Training Period: 0 	 Iter: 112 	 time = 13.7 	 loss = 0.000091 	 acc = 1.0000
+2019-11-18 14:07:29,961 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 112 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:30,855 - __main__ - INFO - Training Period: 0 	 Iter: 113 	 time = 13.3 	 loss = 0.000080 	 acc = 1.0000
+2019-11-18 14:07:30,949 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 113 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:31,845 - __main__ - INFO - Training Period: 0 	 Iter: 114 	 time = 13.4 	 loss = 0.001402 	 acc = 0.0000
+2019-11-18 14:07:31,940 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 114 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:32,840 - __main__ - INFO - Training Period: 0 	 Iter: 115 	 time = 13.4 	 loss = 0.000378 	 acc = 0.0000
+2019-11-18 14:07:32,933 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 115 	 time = 1.4 						 acc = 0.9896
+2019-11-18 14:07:33,832 - __main__ - INFO - Training Period: 0 	 Iter: 116 	 time = 13.4 	 loss = 0.000790 	 acc = 0.0000
+2019-11-18 14:07:33,926 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 116 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:34,824 - __main__ - INFO - Training Period: 0 	 Iter: 117 	 time = 13.4 	 loss = 0.000050 	 acc = 1.0000
+2019-11-18 14:07:34,916 - __main__ - INFO - Testing novel+old Period: 0 	 Iter: 117 	 time = 1.4 						 acc = 1.0000
+2019-11-18 14:07:34,916 - __main__ - INFO - training loss converged
+2019-11-18 14:07:34,916 - __main__ - INFO - save model: model/model_slide_e2e_similar_init_8.pth
+2019-11-18 14:07:34,917 - __main__ - INFO - update the memory
+2019-11-18 14:07:34,921 - __main__ - INFO - -----------------------------------
+2019-11-18 14:07:34,921 - __main__ - INFO - period = 1
+2019-11-18 14:07:34,921 - __main__ - INFO - new classes: [ 8  9 10 11 12]
+2019-11-18 14:07:34,931 - __main__ - INFO - training size = 500
+2019-11-18 14:07:34,931 - __main__ - INFO - current lr = 0.001000
+2019-11-18 14:07:36,328 - __main__ - INFO - Training Period: 1 	 Iter: 0 	 time = 20.9 	 loss = 0.108172 	 acc = 0.0000
+2019-11-18 14:07:36,433 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 0 	 time = 1.6 						 acc = 0.2885
+2019-11-18 14:07:37,624 - __main__ - INFO - Training Period: 1 	 Iter: 1 	 time = 17.8 	 loss = 0.087388 	 acc = 0.0000
+2019-11-18 14:07:37,728 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 1 	 time = 1.6 						 acc = 0.4744
+2019-11-18 14:07:39,037 - __main__ - INFO - Training Period: 1 	 Iter: 2 	 time = 19.6 	 loss = 0.070098 	 acc = 0.0000
+2019-11-18 14:07:39,176 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 2 	 time = 2.1 						 acc = 0.4872
+2019-11-18 14:07:40,749 - __main__ - INFO - Training Period: 1 	 Iter: 3 	 time = 23.5 	 loss = 0.063333 	 acc = 0.0000
+2019-11-18 14:07:40,891 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 3 	 time = 2.1 						 acc = 0.5385
+2019-11-18 14:07:42,509 - __main__ - INFO - Training Period: 1 	 Iter: 4 	 time = 24.1 	 loss = 0.053503 	 acc = 0.0000
+2019-11-18 14:07:42,648 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 4 	 time = 2.1 						 acc = 0.6603
+2019-11-18 14:07:44,219 - __main__ - INFO - Training Period: 1 	 Iter: 5 	 time = 23.5 	 loss = 0.045239 	 acc = 0.0000
+2019-11-18 14:07:44,361 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 5 	 time = 2.1 						 acc = 0.6474
+2019-11-18 14:07:45,698 - __main__ - INFO - Training Period: 1 	 Iter: 6 	 time = 20.0 	 loss = 0.036459 	 acc = 0.0000
+2019-11-18 14:07:45,800 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 6 	 time = 1.5 						 acc = 0.6667
+2019-11-18 14:07:46,993 - __main__ - INFO - Training Period: 1 	 Iter: 7 	 time = 17.8 	 loss = 0.032252 	 acc = 0.0000
+2019-11-18 14:07:47,096 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 7 	 time = 1.5 						 acc = 0.6923
+2019-11-18 14:07:48,482 - __main__ - INFO - Training Period: 1 	 Iter: 8 	 time = 20.7 	 loss = 0.033830 	 acc = 0.0000
+2019-11-18 14:07:48,617 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 8 	 time = 2.0 						 acc = 0.6218
+2019-11-18 14:07:50,185 - __main__ - INFO - Training Period: 1 	 Iter: 9 	 time = 23.4 	 loss = 0.028412 	 acc = 0.0000
+2019-11-18 14:07:50,321 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 9 	 time = 2.0 						 acc = 0.7244
+2019-11-18 14:07:51,912 - __main__ - INFO - Training Period: 1 	 Iter: 10 	 time = 23.7 	 loss = 0.027006 	 acc = 0.0000
+2019-11-18 14:07:52,050 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 10 	 time = 2.1 						 acc = 0.6346
+2019-11-18 14:07:53,624 - __main__ - INFO - Training Period: 1 	 Iter: 11 	 time = 23.5 	 loss = 0.026898 	 acc = 0.0000
+2019-11-18 14:07:53,762 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 11 	 time = 2.1 						 acc = 0.6923
+2019-11-18 14:07:55,348 - __main__ - INFO - Training Period: 1 	 Iter: 12 	 time = 23.7 	 loss = 0.024102 	 acc = 0.0000
+2019-11-18 14:07:55,490 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 12 	 time = 2.1 						 acc = 0.7308
+2019-11-18 14:07:57,083 - __main__ - INFO - Training Period: 1 	 Iter: 13 	 time = 23.8 	 loss = 0.022472 	 acc = 0.0000
+2019-11-18 14:07:57,221 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 13 	 time = 2.1 						 acc = 0.7115
+2019-11-18 14:07:58,791 - __main__ - INFO - Training Period: 1 	 Iter: 14 	 time = 23.4 	 loss = 0.021772 	 acc = 0.0000
+2019-11-18 14:07:58,929 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 14 	 time = 2.1 						 acc = 0.6987
+2019-11-18 14:08:00,519 - __main__ - INFO - Training Period: 1 	 Iter: 15 	 time = 23.7 	 loss = 0.019650 	 acc = 0.0000
+2019-11-18 14:08:00,656 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 15 	 time = 2.0 						 acc = 0.7308
+2019-11-18 14:08:02,230 - __main__ - INFO - Training Period: 1 	 Iter: 16 	 time = 23.5 	 loss = 0.024314 	 acc = 0.0000
+2019-11-18 14:08:02,369 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 16 	 time = 2.1 						 acc = 0.7179
+2019-11-18 14:08:03,790 - __main__ - INFO - Training Period: 1 	 Iter: 17 	 time = 21.2 	 loss = 0.019715 	 acc = 0.0000
+2019-11-18 14:08:03,893 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 17 	 time = 1.5 						 acc = 0.6923
+2019-11-18 14:08:05,083 - __main__ - INFO - Training Period: 1 	 Iter: 18 	 time = 17.8 	 loss = 0.019292 	 acc = 0.0000
+2019-11-18 14:08:05,188 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 18 	 time = 1.6 						 acc = 0.6923
+2019-11-18 14:08:06,518 - __main__ - INFO - Training Period: 1 	 Iter: 19 	 time = 19.9 	 loss = 0.017867 	 acc = 0.0000
+2019-11-18 14:08:06,626 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 19 	 time = 1.6 						 acc = 0.6923
+2019-11-18 14:08:07,890 - __main__ - INFO - Training Period: 1 	 Iter: 20 	 time = 18.9 	 loss = 0.016273 	 acc = 0.0000
+2019-11-18 14:08:07,996 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 20 	 time = 1.6 						 acc = 0.7436
+2019-11-18 14:08:09,244 - __main__ - INFO - Training Period: 1 	 Iter: 21 	 time = 18.6 	 loss = 0.017762 	 acc = 0.0000
+2019-11-18 14:08:09,348 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 21 	 time = 1.5 						 acc = 0.7372
+2019-11-18 14:08:10,537 - __main__ - INFO - Training Period: 1 	 Iter: 22 	 time = 17.7 	 loss = 0.016857 	 acc = 0.0000
+2019-11-18 14:08:10,638 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 22 	 time = 1.5 						 acc = 0.6987
+2019-11-18 14:08:11,834 - __main__ - INFO - Training Period: 1 	 Iter: 23 	 time = 17.9 	 loss = 0.019183 	 acc = 0.0000
+2019-11-18 14:08:11,937 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 23 	 time = 1.5 						 acc = 0.7179
+2019-11-18 14:08:13,502 - __main__ - INFO - Training Period: 1 	 Iter: 24 	 time = 23.4 	 loss = 0.015845 	 acc = 0.0000
+2019-11-18 14:08:13,640 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 24 	 time = 2.1 						 acc = 0.7500
+2019-11-18 14:08:15,221 - __main__ - INFO - Training Period: 1 	 Iter: 25 	 time = 23.6 	 loss = 0.015712 	 acc = 0.0000
+2019-11-18 14:08:15,364 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 25 	 time = 2.1 						 acc = 0.7244
+2019-11-18 14:08:16,929 - __main__ - INFO - Training Period: 1 	 Iter: 26 	 time = 23.4 	 loss = 0.013709 	 acc = 0.0000
+2019-11-18 14:08:17,074 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 26 	 time = 2.1 						 acc = 0.7564
+2019-11-18 14:08:18,651 - __main__ - INFO - Training Period: 1 	 Iter: 27 	 time = 23.6 	 loss = 0.015222 	 acc = 0.0000
+2019-11-18 14:08:18,790 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 27 	 time = 2.1 						 acc = 0.7372
+2019-11-18 14:08:20,359 - __main__ - INFO - Training Period: 1 	 Iter: 28 	 time = 23.4 	 loss = 0.014920 	 acc = 0.0000
+2019-11-18 14:08:20,498 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 28 	 time = 2.1 						 acc = 0.6795
+2019-11-18 14:08:22,071 - __main__ - INFO - Training Period: 1 	 Iter: 29 	 time = 23.5 	 loss = 0.015108 	 acc = 0.0000
+2019-11-18 14:08:22,211 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 29 	 time = 2.1 						 acc = 0.6538
+2019-11-18 14:08:23,796 - __main__ - INFO - Training Period: 1 	 Iter: 30 	 time = 23.7 	 loss = 0.016936 	 acc = 0.0000
+2019-11-18 14:08:23,932 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 30 	 time = 2.0 						 acc = 0.7308
+2019-11-18 14:08:25,268 - __main__ - INFO - Training Period: 1 	 Iter: 31 	 time = 20.0 	 loss = 0.013879 	 acc = 0.0000
+2019-11-18 14:08:25,371 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 31 	 time = 1.5 						 acc = 0.7500
+2019-11-18 14:08:26,781 - __main__ - INFO - Training Period: 1 	 Iter: 32 	 time = 21.1 	 loss = 0.013793 	 acc = 0.0000
+2019-11-18 14:08:26,918 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 32 	 time = 2.0 						 acc = 0.6731
+2019-11-18 14:08:28,503 - __main__ - INFO - Training Period: 1 	 Iter: 33 	 time = 23.6 	 loss = 0.016136 	 acc = 0.0000
+2019-11-18 14:08:28,644 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 33 	 time = 2.1 						 acc = 0.7308
+2019-11-18 14:08:30,219 - __main__ - INFO - Training Period: 1 	 Iter: 34 	 time = 23.5 	 loss = 0.014117 	 acc = 0.0000
+2019-11-18 14:08:30,358 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 34 	 time = 2.1 						 acc = 0.7436
+2019-11-18 14:08:31,938 - __main__ - INFO - Training Period: 1 	 Iter: 35 	 time = 23.6 	 loss = 0.011797 	 acc = 0.0000
+2019-11-18 14:08:32,076 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 35 	 time = 2.1 						 acc = 0.7436
+2019-11-18 14:08:33,655 - __main__ - INFO - Training Period: 1 	 Iter: 36 	 time = 23.6 	 loss = 0.014374 	 acc = 0.0000
+2019-11-18 14:08:33,794 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 36 	 time = 2.1 						 acc = 0.7308
+2019-11-18 14:08:35,368 - __main__ - INFO - Training Period: 1 	 Iter: 37 	 time = 23.5 	 loss = 0.014967 	 acc = 0.0000
+2019-11-18 14:08:35,509 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 37 	 time = 2.1 						 acc = 0.7500
+2019-11-18 14:08:37,093 - __main__ - INFO - Training Period: 1 	 Iter: 38 	 time = 23.7 	 loss = 0.017627 	 acc = 0.0000
+2019-11-18 14:08:37,234 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 38 	 time = 2.1 						 acc = 0.7500
+2019-11-18 14:08:38,814 - __main__ - INFO - Training Period: 1 	 Iter: 39 	 time = 23.6 	 loss = 0.014951 	 acc = 0.0000
+2019-11-18 14:08:38,952 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 39 	 time = 2.1 						 acc = 0.6410
+2019-11-18 14:08:40,640 - __main__ - INFO - Training Period: 1 	 Iter: 40 	 time = 25.0 	 loss = 0.015873 	 acc = 0.0000
+2019-11-18 14:08:40,777 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 40 	 time = 2.0 						 acc = 0.7179
+2019-11-18 14:08:42,366 - __main__ - INFO - Training Period: 1 	 Iter: 41 	 time = 23.7 	 loss = 0.013332 	 acc = 0.0000
+2019-11-18 14:08:42,505 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 41 	 time = 2.1 						 acc = 0.6923
+2019-11-18 14:08:44,118 - __main__ - INFO - Training Period: 1 	 Iter: 42 	 time = 24.0 	 loss = 0.012758 	 acc = 0.0000
+2019-11-18 14:08:44,255 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 42 	 time = 2.1 						 acc = 0.7372
+2019-11-18 14:08:45,922 - __main__ - INFO - Training Period: 1 	 Iter: 43 	 time = 24.7 	 loss = 0.012737 	 acc = 0.0000
+2019-11-18 14:08:46,056 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 43 	 time = 2.0 						 acc = 0.7115
+2019-11-18 14:08:47,630 - __main__ - INFO - Training Period: 1 	 Iter: 44 	 time = 23.5 	 loss = 0.020901 	 acc = 0.0000
+2019-11-18 14:08:47,766 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 44 	 time = 2.0 						 acc = 0.6987
+2019-11-18 14:08:49,532 - __main__ - INFO - Training Period: 1 	 Iter: 45 	 time = 26.0 	 loss = 0.014049 	 acc = 0.0000
+2019-11-18 14:08:49,671 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 45 	 time = 2.1 						 acc = 0.6987
+2019-11-18 14:08:51,233 - __main__ - INFO - Training Period: 1 	 Iter: 46 	 time = 23.3 	 loss = 0.012317 	 acc = 0.0000
+2019-11-18 14:08:51,370 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 46 	 time = 2.0 						 acc = 0.6859
+2019-11-18 14:08:53,079 - __main__ - INFO - Training Period: 1 	 Iter: 47 	 time = 25.3 	 loss = 0.012826 	 acc = 0.0000
+2019-11-18 14:08:53,217 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 47 	 time = 2.1 						 acc = 0.7244
+2019-11-18 14:08:54,965 - __main__ - INFO - Training Period: 1 	 Iter: 48 	 time = 25.8 	 loss = 0.015105 	 acc = 0.0000
+2019-11-18 14:08:55,107 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 48 	 time = 2.1 						 acc = 0.7628
+2019-11-18 14:08:56,671 - __main__ - INFO - Training Period: 1 	 Iter: 49 	 time = 23.4 	 loss = 0.013494 	 acc = 0.0000
+2019-11-18 14:08:56,811 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 49 	 time = 2.1 						 acc = 0.7179
+2019-11-18 14:08:56,811 - __main__ - INFO - iteration 50, current lr= 0.0005
+2019-11-18 14:08:58,462 - __main__ - INFO - Training Period: 1 	 Iter: 50 	 time = 24.4 	 loss = 0.011801 	 acc = 0.0000
+2019-11-18 14:08:58,603 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 50 	 time = 2.1 						 acc = 0.7308
+2019-11-18 14:09:00,195 - __main__ - INFO - Training Period: 1 	 Iter: 51 	 time = 23.7 	 loss = 0.011106 	 acc = 0.0000
+2019-11-18 14:09:00,336 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 51 	 time = 2.1 						 acc = 0.7436
+2019-11-18 14:09:02,085 - __main__ - INFO - Training Period: 1 	 Iter: 52 	 time = 25.8 	 loss = 0.011253 	 acc = 0.0000
+2019-11-18 14:09:02,222 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 52 	 time = 2.0 						 acc = 0.7179
+2019-11-18 14:09:03,827 - __main__ - INFO - Training Period: 1 	 Iter: 53 	 time = 23.8 	 loss = 0.010612 	 acc = 0.0000
+2019-11-18 14:09:04,103 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 53 	 time = 3.4 						 acc = 0.7051
+2019-11-18 14:09:05,695 - __main__ - INFO - Training Period: 1 	 Iter: 54 	 time = 23.4 	 loss = 0.010502 	 acc = 0.0000
+2019-11-18 14:09:05,833 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 54 	 time = 2.1 						 acc = 0.7500
+2019-11-18 14:09:07,608 - __main__ - INFO - Training Period: 1 	 Iter: 55 	 time = 26.2 	 loss = 0.010521 	 acc = 0.0000
+2019-11-18 14:09:07,758 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 55 	 time = 2.2 						 acc = 0.7372
+2019-11-18 14:09:09,422 - __main__ - INFO - Training Period: 1 	 Iter: 56 	 time = 24.9 	 loss = 0.011435 	 acc = 0.0000
+2019-11-18 14:09:09,568 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 56 	 time = 2.2 						 acc = 0.7564
+2019-11-18 14:09:11,356 - __main__ - INFO - Training Period: 1 	 Iter: 57 	 time = 26.4 	 loss = 0.011492 	 acc = 0.0000
+2019-11-18 14:09:11,497 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 57 	 time = 2.1 						 acc = 0.7500
+2019-11-18 14:09:13,108 - __main__ - INFO - Training Period: 1 	 Iter: 58 	 time = 23.9 	 loss = 0.010265 	 acc = 1.0000
+2019-11-18 14:09:13,253 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 58 	 time = 2.1 						 acc = 0.7115
+2019-11-18 14:09:14,833 - __main__ - INFO - Training Period: 1 	 Iter: 59 	 time = 23.6 	 loss = 0.010635 	 acc = 0.0000
+2019-11-18 14:09:14,972 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 59 	 time = 2.1 						 acc = 0.7500
+2019-11-18 14:09:16,606 - __main__ - INFO - Training Period: 1 	 Iter: 60 	 time = 24.3 	 loss = 0.011431 	 acc = 0.0000
+2019-11-18 14:09:16,746 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 60 	 time = 2.1 						 acc = 0.7436
+2019-11-18 14:09:18,332 - __main__ - INFO - Training Period: 1 	 Iter: 61 	 time = 23.7 	 loss = 0.010861 	 acc = 0.0000
+2019-11-18 14:09:18,474 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 61 	 time = 2.1 						 acc = 0.7244
+2019-11-18 14:09:20,183 - __main__ - INFO - Training Period: 1 	 Iter: 62 	 time = 25.3 	 loss = 0.012057 	 acc = 0.0000
+2019-11-18 14:09:20,324 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 62 	 time = 2.1 						 acc = 0.7500
+2019-11-18 14:09:21,982 - __main__ - INFO - Training Period: 1 	 Iter: 63 	 time = 24.6 	 loss = 0.010737 	 acc = 0.0000
+2019-11-18 14:09:22,124 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 63 	 time = 2.1 						 acc = 0.7115
+2019-11-18 14:09:23,912 - __main__ - INFO - Training Period: 1 	 Iter: 64 	 time = 26.4 	 loss = 0.011167 	 acc = 0.0000
+2019-11-18 14:09:24,059 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 64 	 time = 2.2 						 acc = 0.7244
+2019-11-18 14:09:25,796 - __main__ - INFO - Training Period: 1 	 Iter: 65 	 time = 25.7 	 loss = 0.010609 	 acc = 0.0000
+2019-11-18 14:09:25,943 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 65 	 time = 2.2 						 acc = 0.7244
+2019-11-18 14:09:27,590 - __main__ - INFO - Training Period: 1 	 Iter: 66 	 time = 24.6 	 loss = 0.010270 	 acc = 0.0000
+2019-11-18 14:09:27,744 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 66 	 time = 2.3 						 acc = 0.7372
+2019-11-18 14:09:29,541 - __main__ - INFO - Training Period: 1 	 Iter: 67 	 time = 26.4 	 loss = 0.010495 	 acc = 0.0000
+2019-11-18 14:09:29,678 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 67 	 time = 2.1 						 acc = 0.7179
+2019-11-18 14:09:31,301 - __main__ - INFO - Training Period: 1 	 Iter: 68 	 time = 24.2 	 loss = 0.014306 	 acc = 0.0000
+2019-11-18 14:09:31,477 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 68 	 time = 2.5 						 acc = 0.7115
+2019-11-18 14:09:33,059 - __main__ - INFO - Training Period: 1 	 Iter: 69 	 time = 23.4 	 loss = 0.013005 	 acc = 0.0000
+2019-11-18 14:09:33,201 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 69 	 time = 2.1 						 acc = 0.7564
+2019-11-18 14:09:34,869 - __main__ - INFO - Training Period: 1 	 Iter: 70 	 time = 24.7 	 loss = 0.010397 	 acc = 0.0000
+2019-11-18 14:09:35,014 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 70 	 time = 2.2 						 acc = 0.7628
+2019-11-18 14:09:36,649 - __main__ - INFO - Training Period: 1 	 Iter: 71 	 time = 24.3 	 loss = 0.010372 	 acc = 0.0000
+2019-11-18 14:09:36,786 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 71 	 time = 2.0 						 acc = 0.7115
+2019-11-18 14:09:38,490 - __main__ - INFO - Training Period: 1 	 Iter: 72 	 time = 25.2 	 loss = 0.010422 	 acc = 0.0000
+2019-11-18 14:09:38,640 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 72 	 time = 2.2 						 acc = 0.7436
+2019-11-18 14:09:40,219 - __main__ - INFO - Training Period: 1 	 Iter: 73 	 time = 23.6 	 loss = 0.009995 	 acc = 1.0000
+2019-11-18 14:09:40,389 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 73 	 time = 2.5 						 acc = 0.7115
+2019-11-18 14:09:42,054 - __main__ - INFO - Training Period: 1 	 Iter: 74 	 time = 24.3 	 loss = 0.010161 	 acc = 0.0000
+2019-11-18 14:09:42,189 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 74 	 time = 2.0 						 acc = 0.7564
+2019-11-18 14:09:43,999 - __main__ - INFO - Training Period: 1 	 Iter: 75 	 time = 26.5 	 loss = 0.010301 	 acc = 0.0000
+2019-11-18 14:09:44,136 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 75 	 time = 2.0 						 acc = 0.7436
+2019-11-18 14:09:45,723 - __main__ - INFO - Training Period: 1 	 Iter: 76 	 time = 23.7 	 loss = 0.012611 	 acc = 0.0000
+2019-11-18 14:09:45,862 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 76 	 time = 2.1 						 acc = 0.7628
+2019-11-18 14:09:47,523 - __main__ - INFO - Training Period: 1 	 Iter: 77 	 time = 24.5 	 loss = 0.011535 	 acc = 0.0000
+2019-11-18 14:09:47,658 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 77 	 time = 2.0 						 acc = 0.7500
+2019-11-18 14:09:49,237 - __main__ - INFO - Training Period: 1 	 Iter: 78 	 time = 23.4 	 loss = 0.010411 	 acc = 0.0000
+2019-11-18 14:09:49,372 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 78 	 time = 2.0 						 acc = 0.7564
+2019-11-18 14:09:51,029 - __main__ - INFO - Training Period: 1 	 Iter: 79 	 time = 24.4 	 loss = 0.014776 	 acc = 0.0000
+2019-11-18 14:09:51,164 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 79 	 time = 2.0 						 acc = 0.6667
+2019-11-18 14:09:52,876 - __main__ - INFO - Training Period: 1 	 Iter: 80 	 time = 25.2 	 loss = 0.010083 	 acc = 0.0000
+2019-11-18 14:09:53,012 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 80 	 time = 2.0 						 acc = 0.7500
+2019-11-18 14:09:54,613 - __main__ - INFO - Training Period: 1 	 Iter: 81 	 time = 23.7 	 loss = 0.010800 	 acc = 0.0000
+2019-11-18 14:09:54,748 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 81 	 time = 2.0 						 acc = 0.6987
+2019-11-18 14:09:56,507 - __main__ - INFO - Training Period: 1 	 Iter: 82 	 time = 25.9 	 loss = 0.010090 	 acc = 0.0000
+2019-11-18 14:09:56,644 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 82 	 time = 2.0 						 acc = 0.7564
+2019-11-18 14:09:58,246 - __main__ - INFO - Training Period: 1 	 Iter: 83 	 time = 23.7 	 loss = 0.009960 	 acc = 1.0000
+2019-11-18 14:09:58,385 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 83 	 time = 2.0 						 acc = 0.7372
+2019-11-18 14:10:00,132 - __main__ - INFO - Training Period: 1 	 Iter: 84 	 time = 25.8 	 loss = 0.010494 	 acc = 0.0000
+2019-11-18 14:10:00,271 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 84 	 time = 2.1 						 acc = 0.7372
+2019-11-18 14:10:01,926 - __main__ - INFO - Training Period: 1 	 Iter: 85 	 time = 24.5 	 loss = 0.010525 	 acc = 0.0000
+2019-11-18 14:10:02,069 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 85 	 time = 2.1 						 acc = 0.7372
+2019-11-18 14:10:03,689 - __main__ - INFO - Training Period: 1 	 Iter: 86 	 time = 24.0 	 loss = 0.010317 	 acc = 0.0000
+2019-11-18 14:10:03,828 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 86 	 time = 2.1 						 acc = 0.7436
+2019-11-18 14:10:05,519 - __main__ - INFO - Training Period: 1 	 Iter: 87 	 time = 25.0 	 loss = 0.010239 	 acc = 0.0000
+2019-11-18 14:10:05,658 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 87 	 time = 2.1 						 acc = 0.7308
+2019-11-18 14:10:07,232 - __main__ - INFO - Training Period: 1 	 Iter: 88 	 time = 23.5 	 loss = 0.009949 	 acc = 1.0000
+2019-11-18 14:10:07,369 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 88 	 time = 2.0 						 acc = 0.7500
+2019-11-18 14:10:09,052 - __main__ - INFO - Training Period: 1 	 Iter: 89 	 time = 24.9 	 loss = 0.012271 	 acc = 0.0000
+2019-11-18 14:10:09,187 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 89 	 time = 2.0 						 acc = 0.7308
+2019-11-18 14:10:10,909 - __main__ - INFO - Training Period: 1 	 Iter: 90 	 time = 25.4 	 loss = 0.010588 	 acc = 0.0000
+2019-11-18 14:10:11,062 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 90 	 time = 2.2 						 acc = 0.7179
+2019-11-18 14:10:12,777 - __main__ - INFO - Training Period: 1 	 Iter: 91 	 time = 25.4 	 loss = 0.012023 	 acc = 0.0000
+2019-11-18 14:10:12,924 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 91 	 time = 2.2 						 acc = 0.7564
+2019-11-18 14:10:14,646 - __main__ - INFO - Training Period: 1 	 Iter: 92 	 time = 25.5 	 loss = 0.012539 	 acc = 0.0000
+2019-11-18 14:10:14,791 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 92 	 time = 2.2 						 acc = 0.7564
+2019-11-18 14:10:16,441 - __main__ - INFO - Training Period: 1 	 Iter: 93 	 time = 24.7 	 loss = 0.011830 	 acc = 0.0000
+2019-11-18 14:10:16,588 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 93 	 time = 2.2 						 acc = 0.7372
+2019-11-18 14:10:18,319 - __main__ - INFO - Training Period: 1 	 Iter: 94 	 time = 25.7 	 loss = 0.011443 	 acc = 0.0000
+2019-11-18 14:10:18,465 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 94 	 time = 2.2 						 acc = 0.7436
+2019-11-18 14:10:20,199 - __main__ - INFO - Training Period: 1 	 Iter: 95 	 time = 25.7 	 loss = 0.011184 	 acc = 0.0000
+2019-11-18 14:10:20,349 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 95 	 time = 2.2 						 acc = 0.7372
+2019-11-18 14:10:22,004 - __main__ - INFO - Training Period: 1 	 Iter: 96 	 time = 24.7 	 loss = 0.010514 	 acc = 0.0000
+2019-11-18 14:10:22,151 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 96 	 time = 2.2 						 acc = 0.7372
+2019-11-18 14:10:23,892 - __main__ - INFO - Training Period: 1 	 Iter: 97 	 time = 25.9 	 loss = 0.010032 	 acc = 1.0000
+2019-11-18 14:10:24,037 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 97 	 time = 2.2 						 acc = 0.7436
+2019-11-18 14:10:25,709 - __main__ - INFO - Training Period: 1 	 Iter: 98 	 time = 25.0 	 loss = 0.010478 	 acc = 0.0000
+2019-11-18 14:10:25,861 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 98 	 time = 2.3 						 acc = 0.7500
+2019-11-18 14:10:27,562 - __main__ - INFO - Training Period: 1 	 Iter: 99 	 time = 25.2 	 loss = 0.010538 	 acc = 0.0000
+2019-11-18 14:10:27,700 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 99 	 time = 2.0 						 acc = 0.7372
+2019-11-18 14:10:27,700 - __main__ - INFO - iteration 100, current lr= 0.00025
+2019-11-18 14:10:29,306 - __main__ - INFO - Training Period: 1 	 Iter: 100 	 time = 23.8 	 loss = 0.009900 	 acc = 1.0000
+2019-11-18 14:10:29,492 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 100 	 time = 2.7 						 acc = 0.7436
+2019-11-18 14:10:31,063 - __main__ - INFO - Training Period: 1 	 Iter: 101 	 time = 23.2 	 loss = 0.010011 	 acc = 0.0000
+2019-11-18 14:10:31,202 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 101 	 time = 2.1 						 acc = 0.7372
+2019-11-18 14:10:32,995 - __main__ - INFO - Training Period: 1 	 Iter: 102 	 time = 26.5 	 loss = 0.009913 	 acc = 1.0000
+2019-11-18 14:10:33,135 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 102 	 time = 2.1 						 acc = 0.7179
+2019-11-18 14:10:34,794 - __main__ - INFO - Training Period: 1 	 Iter: 103 	 time = 24.6 	 loss = 0.009880 	 acc = 1.0000
+2019-11-18 14:10:34,938 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 103 	 time = 2.1 						 acc = 0.7308
+2019-11-18 14:10:36,704 - __main__ - INFO - Training Period: 1 	 Iter: 104 	 time = 26.1 	 loss = 0.009926 	 acc = 1.0000
+2019-11-18 14:10:36,854 - __main__ - INFO - Testing novel+old Period: 1 	 Iter: 104 	 time = 2.1 						 acc = 0.7372
+2019-11-18 14:10:36,854 - __main__ - INFO - training loss converged
+2019-11-18 14:10:36,855 - __main__ - INFO - save model: model/model_slide_e2e_similar_init_13.pth
+2019-11-18 14:10:36,856 - __main__ - INFO - update the memory
+2019-11-18 14:10:36,858 - __main__ - INFO - -----------------------------------
+2019-11-18 14:10:36,858 - __main__ - INFO - period = 2
+2019-11-18 14:10:36,858 - __main__ - INFO - new classes: [13 14 15 16 17]
+2019-11-18 14:10:36,872 - __main__ - INFO - training size = 480
+2019-11-18 14:10:36,872 - __main__ - INFO - current lr = 0.001000
+2019-11-18 14:10:38,627 - __main__ - INFO - Training Period: 2 	 Iter: 0 	 time = 25.5 	 loss = 0.126590 	 acc = 0.0000
+2019-11-18 14:10:38,823 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 0 	 time = 2.9 						 acc = 0.1204
+2019-11-18 14:10:40,302 - __main__ - INFO - Training Period: 2 	 Iter: 1 	 time = 21.7 	 loss = 0.106099 	 acc = 0.0000
+2019-11-18 14:10:40,495 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 1 	 time = 2.9 						 acc = 0.2778
+2019-11-18 14:10:42,099 - __main__ - INFO - Training Period: 2 	 Iter: 2 	 time = 23.4 	 loss = 0.091493 	 acc = 0.0000
+2019-11-18 14:10:42,290 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 2 	 time = 2.8 						 acc = 0.3657
+2019-11-18 14:10:43,792 - __main__ - INFO - Training Period: 2 	 Iter: 3 	 time = 22.1 	 loss = 0.079283 	 acc = 0.0000
+2019-11-18 14:10:43,984 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 3 	 time = 2.9 						 acc = 0.4120
+2019-11-18 14:10:45,531 - __main__ - INFO - Training Period: 2 	 Iter: 4 	 time = 22.7 	 loss = 0.070624 	 acc = 0.0000
+2019-11-18 14:10:45,720 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 4 	 time = 2.8 						 acc = 0.4213
+2019-11-18 14:10:47,221 - __main__ - INFO - Training Period: 2 	 Iter: 5 	 time = 22.2 	 loss = 0.062684 	 acc = 0.0000
+2019-11-18 14:10:47,443 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 5 	 time = 3.1 						 acc = 0.4907
+2019-11-18 14:10:49,000 - __main__ - INFO - Training Period: 2 	 Iter: 6 	 time = 22.8 	 loss = 0.055909 	 acc = 0.0000
+2019-11-18 14:10:49,189 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 6 	 time = 2.8 						 acc = 0.5509
+2019-11-18 14:10:50,945 - __main__ - INFO - Training Period: 2 	 Iter: 7 	 time = 25.6 	 loss = 0.049551 	 acc = 0.0000
+2019-11-18 14:10:51,139 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 7 	 time = 2.9 						 acc = 0.5787
+2019-11-18 14:10:52,651 - __main__ - INFO - Training Period: 2 	 Iter: 8 	 time = 22.2 	 loss = 0.044436 	 acc = 0.0000
+2019-11-18 14:10:52,846 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 8 	 time = 2.9 						 acc = 0.6343
+2019-11-18 14:10:54,555 - __main__ - INFO - Training Period: 2 	 Iter: 9 	 time = 24.9 	 loss = 0.044297 	 acc = 0.0000
+2019-11-18 14:10:54,757 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 9 	 time = 3.0 						 acc = 0.6204
+2019-11-18 14:10:56,363 - __main__ - INFO - Training Period: 2 	 Iter: 10 	 time = 23.5 	 loss = 0.038053 	 acc = 0.0000
+2019-11-18 14:10:56,614 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 10 	 time = 3.3 						 acc = 0.5926
+2019-11-18 14:10:58,236 - __main__ - INFO - Training Period: 2 	 Iter: 11 	 time = 23.7 	 loss = 0.035455 	 acc = 0.0000
+2019-11-18 14:10:58,438 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 11 	 time = 3.0 						 acc = 0.5694
+2019-11-18 14:11:00,113 - __main__ - INFO - Training Period: 2 	 Iter: 12 	 time = 24.5 	 loss = 0.033154 	 acc = 0.0000
+2019-11-18 14:11:00,313 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 12 	 time = 3.0 						 acc = 0.5509
+2019-11-18 14:11:01,897 - __main__ - INFO - Training Period: 2 	 Iter: 13 	 time = 23.2 	 loss = 0.032158 	 acc = 0.0000
+2019-11-18 14:11:02,098 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 13 	 time = 2.9 						 acc = 0.6296
+2019-11-18 14:11:03,445 - __main__ - INFO - Training Period: 2 	 Iter: 14 	 time = 19.9 	 loss = 0.029661 	 acc = 0.0000
+2019-11-18 14:11:03,589 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 14 	 time = 2.2 						 acc = 0.6667
+2019-11-18 14:11:04,719 - __main__ - INFO - Training Period: 2 	 Iter: 15 	 time = 16.9 	 loss = 0.030573 	 acc = 0.0000
+2019-11-18 14:11:04,858 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 15 	 time = 2.1 						 acc = 0.5926
+2019-11-18 14:11:06,098 - __main__ - INFO - Training Period: 2 	 Iter: 16 	 time = 18.5 	 loss = 0.027766 	 acc = 0.0000
+2019-11-18 14:11:06,237 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 16 	 time = 2.1 						 acc = 0.6898
+2019-11-18 14:11:07,599 - __main__ - INFO - Training Period: 2 	 Iter: 17 	 time = 20.4 	 loss = 0.027057 	 acc = 0.0000
+2019-11-18 14:11:07,793 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 17 	 time = 2.9 						 acc = 0.6620
+2019-11-18 14:11:09,289 - __main__ - INFO - Training Period: 2 	 Iter: 18 	 time = 22.1 	 loss = 0.026060 	 acc = 0.0000
+2019-11-18 14:11:09,477 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 18 	 time = 2.8 						 acc = 0.6759
+2019-11-18 14:11:10,993 - __main__ - INFO - Training Period: 2 	 Iter: 19 	 time = 22.4 	 loss = 0.027035 	 acc = 0.0000
+2019-11-18 14:11:11,189 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 19 	 time = 2.9 						 acc = 0.6389
+2019-11-18 14:11:12,693 - __main__ - INFO - Training Period: 2 	 Iter: 20 	 time = 22.3 	 loss = 0.027694 	 acc = 0.0000
+2019-11-18 14:11:12,885 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 20 	 time = 2.9 						 acc = 0.6574
+2019-11-18 14:11:14,384 - __main__ - INFO - Training Period: 2 	 Iter: 21 	 time = 22.2 	 loss = 0.024601 	 acc = 0.0000
+2019-11-18 14:11:14,575 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 21 	 time = 2.9 						 acc = 0.6111
+2019-11-18 14:11:16,094 - __main__ - INFO - Training Period: 2 	 Iter: 22 	 time = 22.4 	 loss = 0.025387 	 acc = 0.0000
+2019-11-18 14:11:16,289 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 22 	 time = 2.9 						 acc = 0.6528
+2019-11-18 14:11:17,796 - __main__ - INFO - Training Period: 2 	 Iter: 23 	 time = 22.3 	 loss = 0.024102 	 acc = 0.0000
+2019-11-18 14:11:17,995 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 23 	 time = 2.9 						 acc = 0.6759
+2019-11-18 14:11:19,501 - __main__ - INFO - Training Period: 2 	 Iter: 24 	 time = 22.2 	 loss = 0.025478 	 acc = 0.0000
+2019-11-18 14:11:19,692 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 24 	 time = 2.8 						 acc = 0.6713
+2019-11-18 14:11:21,199 - __main__ - INFO - Training Period: 2 	 Iter: 25 	 time = 22.3 	 loss = 0.024046 	 acc = 0.0000
+2019-11-18 14:11:21,389 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 25 	 time = 2.8 						 acc = 0.6944
+2019-11-18 14:11:22,888 - __main__ - INFO - Training Period: 2 	 Iter: 26 	 time = 22.2 	 loss = 0.025990 	 acc = 0.0000
+2019-11-18 14:11:23,087 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 26 	 time = 2.9 						 acc = 0.5880
+2019-11-18 14:11:24,591 - __main__ - INFO - Training Period: 2 	 Iter: 27 	 time = 22.3 	 loss = 0.023657 	 acc = 0.0000
+2019-11-18 14:11:24,791 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 27 	 time = 2.9 						 acc = 0.6481
+2019-11-18 14:11:26,302 - __main__ - INFO - Training Period: 2 	 Iter: 28 	 time = 22.3 	 loss = 0.021156 	 acc = 0.0000
+2019-11-18 14:11:26,501 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 28 	 time = 2.9 						 acc = 0.6759
+2019-11-18 14:11:28,022 - __main__ - INFO - Training Period: 2 	 Iter: 29 	 time = 22.4 	 loss = 0.020734 	 acc = 0.0000
+2019-11-18 14:11:28,219 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 29 	 time = 2.9 						 acc = 0.6852
+2019-11-18 14:11:29,759 - __main__ - INFO - Training Period: 2 	 Iter: 30 	 time = 22.8 	 loss = 0.023791 	 acc = 0.0000
+2019-11-18 14:11:30,011 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 30 	 time = 3.3 						 acc = 0.6852
+2019-11-18 14:11:31,548 - __main__ - INFO - Training Period: 2 	 Iter: 31 	 time = 22.6 	 loss = 0.021096 	 acc = 0.0000
+2019-11-18 14:11:31,739 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 31 	 time = 2.9 						 acc = 0.7222
+2019-11-18 14:11:33,236 - __main__ - INFO - Training Period: 2 	 Iter: 32 	 time = 22.2 	 loss = 0.021505 	 acc = 0.0000
+2019-11-18 14:11:33,426 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 32 	 time = 2.8 						 acc = 0.6806
+2019-11-18 14:11:34,904 - __main__ - INFO - Training Period: 2 	 Iter: 33 	 time = 21.9 	 loss = 0.019542 	 acc = 0.0000
+2019-11-18 14:11:35,096 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 33 	 time = 2.9 						 acc = 0.6898
+2019-11-18 14:11:36,583 - __main__ - INFO - Training Period: 2 	 Iter: 34 	 time = 22.0 	 loss = 0.020712 	 acc = 0.0000
+2019-11-18 14:11:36,777 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 34 	 time = 2.9 						 acc = 0.6481
+2019-11-18 14:11:38,291 - __main__ - INFO - Training Period: 2 	 Iter: 35 	 time = 22.3 	 loss = 0.020058 	 acc = 0.0000
+2019-11-18 14:11:38,484 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 35 	 time = 2.9 						 acc = 0.6898
+2019-11-18 14:11:40,005 - __main__ - INFO - Training Period: 2 	 Iter: 36 	 time = 22.4 	 loss = 0.020162 	 acc = 0.0000
+2019-11-18 14:11:40,199 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 36 	 time = 2.9 						 acc = 0.7315
+2019-11-18 14:11:41,708 - __main__ - INFO - Training Period: 2 	 Iter: 37 	 time = 22.3 	 loss = 0.019196 	 acc = 0.0000
+2019-11-18 14:11:41,899 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 37 	 time = 2.8 						 acc = 0.6944
+2019-11-18 14:11:43,395 - __main__ - INFO - Training Period: 2 	 Iter: 38 	 time = 22.1 	 loss = 0.019887 	 acc = 0.0000
+2019-11-18 14:11:43,590 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 38 	 time = 2.9 						 acc = 0.6991
+2019-11-18 14:11:45,064 - __main__ - INFO - Training Period: 2 	 Iter: 39 	 time = 21.8 	 loss = 0.019263 	 acc = 0.0000
+2019-11-18 14:11:45,263 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 39 	 time = 2.9 						 acc = 0.7176
+2019-11-18 14:11:46,416 - __main__ - INFO - Training Period: 2 	 Iter: 40 	 time = 17.0 	 loss = 0.019051 	 acc = 0.0000
+2019-11-18 14:11:46,562 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 40 	 time = 2.2 						 acc = 0.7130
+2019-11-18 14:11:47,718 - __main__ - INFO - Training Period: 2 	 Iter: 41 	 time = 17.3 	 loss = 0.018010 	 acc = 0.0000
+2019-11-18 14:11:47,862 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 41 	 time = 2.1 						 acc = 0.6944
+2019-11-18 14:11:49,296 - __main__ - INFO - Training Period: 2 	 Iter: 42 	 time = 21.4 	 loss = 0.018076 	 acc = 0.0000
+2019-11-18 14:11:49,492 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 42 	 time = 2.9 						 acc = 0.6481
+2019-11-18 14:11:50,992 - __main__ - INFO - Training Period: 2 	 Iter: 43 	 time = 22.2 	 loss = 0.017313 	 acc = 0.0000
+2019-11-18 14:11:51,188 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 43 	 time = 2.9 						 acc = 0.7083
+2019-11-18 14:11:52,688 - __main__ - INFO - Training Period: 2 	 Iter: 44 	 time = 22.2 	 loss = 0.026389 	 acc = 0.0000
+2019-11-18 14:11:52,883 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 44 	 time = 2.9 						 acc = 0.7037
+2019-11-18 14:11:54,365 - __main__ - INFO - Training Period: 2 	 Iter: 45 	 time = 21.9 	 loss = 0.022537 	 acc = 0.0000
+2019-11-18 14:11:54,559 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 45 	 time = 2.9 						 acc = 0.7176
+2019-11-18 14:11:56,070 - __main__ - INFO - Training Period: 2 	 Iter: 46 	 time = 22.3 	 loss = 0.019194 	 acc = 0.0000
+2019-11-18 14:11:56,263 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 46 	 time = 2.9 						 acc = 0.7176
+2019-11-18 14:11:57,764 - __main__ - INFO - Training Period: 2 	 Iter: 47 	 time = 22.2 	 loss = 0.019017 	 acc = 0.0000
+2019-11-18 14:11:57,958 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 47 	 time = 2.9 						 acc = 0.6991
+2019-11-18 14:11:59,450 - __main__ - INFO - Training Period: 2 	 Iter: 48 	 time = 22.1 	 loss = 0.017306 	 acc = 0.0000
+2019-11-18 14:11:59,642 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 48 	 time = 2.9 						 acc = 0.7361
+2019-11-18 14:12:00,999 - __main__ - INFO - Training Period: 2 	 Iter: 49 	 time = 20.0 	 loss = 0.018596 	 acc = 0.0000
+2019-11-18 14:12:01,140 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 49 	 time = 2.1 						 acc = 0.7407
+2019-11-18 14:12:01,140 - __main__ - INFO - iteration 50, current lr= 0.0005
+2019-11-18 14:12:02,281 - __main__ - INFO - Training Period: 2 	 Iter: 50 	 time = 17.1 	 loss = 0.014754 	 acc = 0.0000
+2019-11-18 14:12:02,426 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 50 	 time = 2.2 						 acc = 0.7361
+2019-11-18 14:12:03,668 - __main__ - INFO - Training Period: 2 	 Iter: 51 	 time = 18.5 	 loss = 0.015623 	 acc = 0.0000
+2019-11-18 14:12:03,811 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 51 	 time = 2.1 						 acc = 0.7454
+2019-11-18 14:12:04,951 - __main__ - INFO - Training Period: 2 	 Iter: 52 	 time = 17.0 	 loss = 0.014147 	 acc = 0.0000
+2019-11-18 14:12:05,093 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 52 	 time = 2.1 						 acc = 0.7222
+2019-11-18 14:12:06,258 - __main__ - INFO - Training Period: 2 	 Iter: 53 	 time = 17.4 	 loss = 0.015065 	 acc = 0.0000
+2019-11-18 14:12:06,455 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 53 	 time = 2.9 						 acc = 0.7500
+2019-11-18 14:12:07,618 - __main__ - INFO - Training Period: 2 	 Iter: 54 	 time = 17.2 	 loss = 0.013482 	 acc = 0.0000
+2019-11-18 14:12:07,761 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 54 	 time = 2.1 						 acc = 0.7407
+2019-11-18 14:12:08,900 - __main__ - INFO - Training Period: 2 	 Iter: 55 	 time = 17.0 	 loss = 0.012486 	 acc = 0.0000
+2019-11-18 14:12:09,043 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 55 	 time = 2.1 						 acc = 0.7315
+2019-11-18 14:12:10,274 - __main__ - INFO - Training Period: 2 	 Iter: 56 	 time = 18.4 	 loss = 0.013939 	 acc = 0.0000
+2019-11-18 14:12:10,416 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 56 	 time = 2.1 						 acc = 0.7546
+2019-11-18 14:12:11,551 - __main__ - INFO - Training Period: 2 	 Iter: 57 	 time = 16.9 	 loss = 0.011904 	 acc = 0.0000
+2019-11-18 14:12:11,694 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 57 	 time = 2.1 						 acc = 0.7315
+2019-11-18 14:12:12,968 - __main__ - INFO - Training Period: 2 	 Iter: 58 	 time = 19.0 	 loss = 0.012370 	 acc = 0.0000
+2019-11-18 14:12:13,165 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 58 	 time = 2.9 						 acc = 0.7500
+2019-11-18 14:12:14,666 - __main__ - INFO - Training Period: 2 	 Iter: 59 	 time = 22.2 	 loss = 0.013715 	 acc = 0.0000
+2019-11-18 14:12:14,862 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 59 	 time = 2.9 						 acc = 0.7500
+2019-11-18 14:12:16,365 - __main__ - INFO - Training Period: 2 	 Iter: 60 	 time = 22.2 	 loss = 0.013624 	 acc = 0.0000
+2019-11-18 14:12:16,557 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 60 	 time = 2.9 						 acc = 0.7593
+2019-11-18 14:12:18,046 - __main__ - INFO - Training Period: 2 	 Iter: 61 	 time = 22.0 	 loss = 0.011730 	 acc = 0.0000
+2019-11-18 14:12:18,242 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 61 	 time = 2.9 						 acc = 0.7176
+2019-11-18 14:12:19,742 - __main__ - INFO - Training Period: 2 	 Iter: 62 	 time = 22.2 	 loss = 0.013191 	 acc = 0.0000
+2019-11-18 14:12:19,938 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 62 	 time = 2.9 						 acc = 0.7361
+2019-11-18 14:12:21,431 - __main__ - INFO - Training Period: 2 	 Iter: 63 	 time = 22.1 	 loss = 0.012440 	 acc = 0.0000
+2019-11-18 14:12:21,627 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 63 	 time = 2.9 						 acc = 0.7222
+2019-11-18 14:12:23,121 - __main__ - INFO - Training Period: 2 	 Iter: 64 	 time = 22.1 	 loss = 0.012590 	 acc = 0.0000
+2019-11-18 14:12:23,318 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 64 	 time = 2.9 						 acc = 0.7130
+2019-11-18 14:12:24,851 - __main__ - INFO - Training Period: 2 	 Iter: 65 	 time = 22.6 	 loss = 0.013494 	 acc = 0.0000
+2019-11-18 14:12:25,014 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 65 	 time = 2.4 						 acc = 0.7778
+2019-11-18 14:12:26,162 - __main__ - INFO - Training Period: 2 	 Iter: 66 	 time = 17.1 	 loss = 0.012589 	 acc = 0.0000
+2019-11-18 14:12:26,310 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 66 	 time = 2.2 						 acc = 0.7315
+2019-11-18 14:12:27,452 - __main__ - INFO - Training Period: 2 	 Iter: 67 	 time = 17.0 	 loss = 0.012990 	 acc = 0.0000
+2019-11-18 14:12:27,594 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 67 	 time = 2.1 						 acc = 0.7500
+2019-11-18 14:12:29,073 - __main__ - INFO - Training Period: 2 	 Iter: 68 	 time = 22.1 	 loss = 0.011785 	 acc = 0.0000
+2019-11-18 14:12:29,266 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 68 	 time = 2.9 						 acc = 0.7407
+2019-11-18 14:12:30,766 - __main__ - INFO - Training Period: 2 	 Iter: 69 	 time = 22.1 	 loss = 0.010951 	 acc = 0.0000
+2019-11-18 14:12:30,964 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 69 	 time = 2.9 						 acc = 0.7454
+2019-11-18 14:12:32,463 - __main__ - INFO - Training Period: 2 	 Iter: 70 	 time = 22.2 	 loss = 0.011051 	 acc = 0.0000
+2019-11-18 14:12:32,655 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 70 	 time = 2.9 						 acc = 0.7176
+2019-11-18 14:12:34,175 - __main__ - INFO - Training Period: 2 	 Iter: 71 	 time = 22.4 	 loss = 0.009873 	 acc = 0.0000
+2019-11-18 14:12:34,367 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 71 	 time = 2.9 						 acc = 0.7500
+2019-11-18 14:12:35,871 - __main__ - INFO - Training Period: 2 	 Iter: 72 	 time = 22.3 	 loss = 0.009859 	 acc = 0.0000
+2019-11-18 14:12:36,067 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 72 	 time = 2.9 						 acc = 0.7269
+2019-11-18 14:12:37,568 - __main__ - INFO - Training Period: 2 	 Iter: 73 	 time = 22.2 	 loss = 0.012662 	 acc = 0.0000
+2019-11-18 14:12:37,764 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 73 	 time = 2.9 						 acc = 0.7269
+2019-11-18 14:12:39,251 - __main__ - INFO - Training Period: 2 	 Iter: 74 	 time = 22.0 	 loss = 0.009905 	 acc = 0.0000
+2019-11-18 14:12:39,442 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 74 	 time = 2.9 						 acc = 0.7454
+2019-11-18 14:12:40,949 - __main__ - INFO - Training Period: 2 	 Iter: 75 	 time = 22.2 	 loss = 0.010069 	 acc = 0.0000
+2019-11-18 14:12:41,144 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 75 	 time = 2.9 						 acc = 0.7269
+2019-11-18 14:12:42,648 - __main__ - INFO - Training Period: 2 	 Iter: 76 	 time = 22.2 	 loss = 0.010693 	 acc = 0.0000
+2019-11-18 14:12:42,844 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 76 	 time = 2.9 						 acc = 0.7407
+2019-11-18 14:12:44,354 - __main__ - INFO - Training Period: 2 	 Iter: 77 	 time = 22.3 	 loss = 0.009605 	 acc = 0.0000
+2019-11-18 14:12:44,544 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 77 	 time = 2.8 						 acc = 0.7361
+2019-11-18 14:12:46,034 - __main__ - INFO - Training Period: 2 	 Iter: 78 	 time = 22.0 	 loss = 0.010604 	 acc = 0.0000
+2019-11-18 14:12:46,229 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 78 	 time = 2.9 						 acc = 0.7361
+2019-11-18 14:12:47,725 - __main__ - INFO - Training Period: 2 	 Iter: 79 	 time = 22.1 	 loss = 0.010307 	 acc = 0.0000
+2019-11-18 14:12:47,918 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 79 	 time = 2.9 						 acc = 0.7037
+2019-11-18 14:12:49,429 - __main__ - INFO - Training Period: 2 	 Iter: 80 	 time = 22.3 	 loss = 0.009088 	 acc = 0.0000
+2019-11-18 14:12:49,622 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 80 	 time = 2.9 						 acc = 0.7361
+2019-11-18 14:12:51,110 - __main__ - INFO - Training Period: 2 	 Iter: 81 	 time = 22.0 	 loss = 0.011168 	 acc = 0.0000
+2019-11-18 14:12:51,303 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 81 	 time = 2.9 						 acc = 0.7222
+2019-11-18 14:12:52,807 - __main__ - INFO - Training Period: 2 	 Iter: 82 	 time = 22.2 	 loss = 0.010222 	 acc = 0.0000
+2019-11-18 14:12:52,999 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 82 	 time = 2.9 						 acc = 0.7454
+2019-11-18 14:12:54,496 - __main__ - INFO - Training Period: 2 	 Iter: 83 	 time = 22.1 	 loss = 0.009105 	 acc = 0.0000
+2019-11-18 14:12:54,689 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 83 	 time = 2.9 						 acc = 0.7130
+2019-11-18 14:12:55,975 - __main__ - INFO - Training Period: 2 	 Iter: 84 	 time = 18.9 	 loss = 0.010179 	 acc = 0.0000
+2019-11-18 14:12:56,120 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 84 	 time = 2.2 						 acc = 0.7315
+2019-11-18 14:12:57,257 - __main__ - INFO - Training Period: 2 	 Iter: 85 	 time = 17.0 	 loss = 0.009397 	 acc = 0.0000
+2019-11-18 14:12:57,403 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 85 	 time = 2.2 						 acc = 0.7546
+2019-11-18 14:12:58,871 - __main__ - INFO - Training Period: 2 	 Iter: 86 	 time = 21.9 	 loss = 0.009035 	 acc = 0.0000
+2019-11-18 14:12:59,067 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 86 	 time = 2.9 						 acc = 0.7269
+2019-11-18 14:13:00,577 - __main__ - INFO - Training Period: 2 	 Iter: 87 	 time = 22.3 	 loss = 0.009602 	 acc = 0.0000
+2019-11-18 14:13:00,769 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 87 	 time = 2.9 						 acc = 0.7269
+2019-11-18 14:13:02,269 - __main__ - INFO - Training Period: 2 	 Iter: 88 	 time = 22.2 	 loss = 0.008522 	 acc = 0.0000
+2019-11-18 14:13:02,463 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 88 	 time = 2.9 						 acc = 0.7731
+2019-11-18 14:13:03,951 - __main__ - INFO - Training Period: 2 	 Iter: 89 	 time = 22.0 	 loss = 0.009050 	 acc = 0.0000
+2019-11-18 14:13:04,140 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 89 	 time = 2.8 						 acc = 0.7083
+2019-11-18 14:13:05,644 - __main__ - INFO - Training Period: 2 	 Iter: 90 	 time = 22.3 	 loss = 0.009247 	 acc = 0.0000
+2019-11-18 14:13:05,833 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 90 	 time = 2.8 						 acc = 0.7454
+2019-11-18 14:13:07,331 - __main__ - INFO - Training Period: 2 	 Iter: 91 	 time = 22.2 	 loss = 0.010018 	 acc = 0.0000
+2019-11-18 14:13:07,525 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 91 	 time = 2.9 						 acc = 0.7176
+2019-11-18 14:13:09,031 - __main__ - INFO - Training Period: 2 	 Iter: 92 	 time = 22.3 	 loss = 0.009110 	 acc = 0.0000
+2019-11-18 14:13:09,219 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 92 	 time = 2.8 						 acc = 0.7593
+2019-11-18 14:13:10,735 - __main__ - INFO - Training Period: 2 	 Iter: 93 	 time = 22.4 	 loss = 0.016565 	 acc = 0.0000
+2019-11-18 14:13:10,924 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 93 	 time = 2.8 						 acc = 0.7083
+2019-11-18 14:13:12,437 - __main__ - INFO - Training Period: 2 	 Iter: 94 	 time = 22.4 	 loss = 0.007940 	 acc = 0.0000
+2019-11-18 14:13:12,632 - __main__ - INFO - Testing novel+old Period: 2 	 Iter: 94 	 time = 2.9 						 acc = 0.7546

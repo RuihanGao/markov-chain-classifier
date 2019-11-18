@@ -644,7 +644,17 @@ for period in range(period_train):
     # TODO update the memory
     logger.info("update the memory")
 
-    # memory management [random select]
+
+
+
+
+
+
+
+
+
+
+# memory management [random select]
     # reduce old memory
     memory_size = min(num_train_per_class, memory_K // (new_num_class + num_class_old))
     if period >0:
