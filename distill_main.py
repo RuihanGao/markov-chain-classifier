@@ -19,7 +19,7 @@ import utils
 import logging
 import logging.config
 
-init_opt = 'similar_init'
+init_opt = 'diff_init'
 # config logging in python code
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -317,6 +317,9 @@ num_train_per_class = images_train.shape[1]
 # get model state
 model_path = 'model/model_slide_e2e_{}_{}.pth'.format(init_opt,cur_num_class+new_num_class)
 flag_model = os.path.exists(model_path)
+print("model_path", model_path, flag_model)
+
+
 
 # gradually increase cur_num_class
 for period in range(period_train):
@@ -434,6 +437,7 @@ for period in range(period_train):
         # load model
         if period == 0 and flag_model:
             logger.info("load model %s for period 0" % model_path)
+            print("load model from local")
             net.load_state_dict(torch.load(model_path))
             net = net.to(device)
             # not the case for CNN-LSTM unless u load the model before
